@@ -1,0 +1,29 @@
+# What are String Concatenations and String Interpolation?
+# String Concatenation: In python you can compine multiple strings together with the + operator. 
+my_str_1 = 'Hello'
+my_str_2 = "World"
+str_plus_str = my_str_1 + ' ' + my_str_2
+print(str_plus_str) # Hello World
+    # You canno't concatonate strings with numbers, we can only concatonate sttring with string
+name = 'Jhon Doe'
+age = 26
+# name_and_age = name + age
+# print(name_and_age) ERROR!
+    # To allow the concatonation of a string and another data type, first turn the other data type into a string using the built-in str()
+name_and_age = name + str(age)
+print(name_and_age) # Jhon Doe26
+    # Another way is tp use the argunemnted assignment operator for concatonation represented by +=, this performs both concatonation and assignment in one step:
+name_and_age = name # start with the name
+name_and_age += str(age) # append the age as string
+print(name_and_age) # Jhon Doe26
+
+# String Interpolation: The process of inserting variables and exporessions into a string.
+# F-strings: Category of string in python (formatted string literals), which allows you to handgle interpolation with a compct and readable syntax
+    # Starts with f before the quotes, and allows you to embed variables or expressions iside replacement fields indicated by {}
+name_and_age = f'My name is {name} and I am {age} years old'
+print(name_and_age) # My name is Jhon Doe and I am 26 years old
+
+num1 = 5
+num2 = 10
+print(f'The sum of {num1} and {num2} is {num1 + num2}') # The sum of 5 and 10 is 15
+

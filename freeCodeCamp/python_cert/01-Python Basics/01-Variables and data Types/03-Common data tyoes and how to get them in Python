@@ -1,0 +1,74 @@
+# unlike other porgramming languages python doesn't need data types like int or char
+name = 'Jhon Doe' # Python knows this is a string
+age = 25 # Python knows this is an integer
+
+# What does compiling mean? Compiling means the computer checks your code in advance and prepares to run it. 
+    # languages that copile can catch type errors before the program even starts. 
+# Python does not compile. In python, type errors can real themselves during execution, then the program is actually running.
+
+# Common Data types in Python 
+
+# Integer: A whole number without decimals, can be positive or negative
+my_integer_var = 10
+print('Integer:', my_integer_var) # Integer: 10
+
+# Float: A umber with decimal points, can be positive or negative
+my_float_var = 4.50
+print('Float:', my_float_var) #Float: 4.5
+
+# String: A sequence of character enclosed in a single or double quotation marks like 'Hello World!'
+my_string_var = 'hello'
+print('String:', my_string_var) # String: hello
+
+# Boolean: A true or false type, written as True or False
+my_boolean_var = True
+print('Boolean:', my_boolean_var) # Boolean: True
+
+# Set: An unordered Collection of Unique elements, like {4, 2, 0}
+my_set_var = {7, 5, 8}
+print('Set:', my_set_var) # Set: {7, 5, 8}
+
+# Dictionary: A collection of key-value pairs enlosed in curly braces, like {'name': 'Jhon Doe', 'age': 28}
+my_dictionary_var = {'name': 'Alice', 'age': 25}
+print('Dictionary:', my_dictionary_var) # Dictionary: {'name': 'Alice', 'age': 25}
+
+# Tuple: An immutable ordered collection, ecosed in brackets, like (7, 8, 4)
+my_tuple_var = (7, 5, 8)
+print('Tuple:', my_tuple_var) # Tulple: (7, 5, 8)
+
+# Range: A sequence of numbers, often used in loops, for example, range(5)
+my_range_var = range(5)
+print('Range:', my_range_var) # Range: range(0, 5)
+
+# List: An ordered collectuon of elements that supports different data types.
+my_list = [22, 'Hello word', 3.14, True]
+print(my_list) # [22, 'Hello World', 3.14, True]
+
+# None: A special value that represents the absence of a value.
+my_none_var = None
+print('None:', my_none_var) #None: None
+
+# To get the data type of a variable, you can use the type() function:
+my_var_1 = 'Hello world'
+print(type(my_var_1)) # <class 'str'>
+my_var_2 = 21
+print(type(my_var_2)) # <class 'int'>
+# Examples using the previous data types
+print(type(my_integer_var))  # <class 'int'>
+print(type(my_float_var))  # <class 'float'>
+print(type(my_string_var))  # <class 'str'>
+print(type(my_boolean_var))  # <class 'bool'>
+print(type(my_set_var))  # <class 'set'>
+print(type(my_dictionary_var))  # <class 'dict'>
+print(type(my_tuple_var))  # <class 'tuple'>
+print(type(my_range_var))  # <class 'range'>
+print(type(my_list)) # <class 'list'>
+print(type(my_none_var))  # <class 'NoneType'>
+
+# The built-in isinstance() function lets you check if a variable matches a specific data type. 
+# it takes in and object and the type you want to ckeck it against, then returns a boolean. 
+isinstance('Hello world', str) # True
+isinstance(True, bool) # True
+isinstance(42, int) # True
+isinstance('Jhon Doe', int) # False
+
