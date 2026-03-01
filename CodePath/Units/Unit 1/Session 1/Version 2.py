@@ -44,4 +44,43 @@ def concatenate_list(nums): # Create a fucntion concatenate_list()
     # in strings it can be "hello" + "world" = "helloworld"
 
 print("-------------------------------------------------------------------")
-# Problem 4: 
+# Problem 4: Sleep Assesment
+    # Write a function sleep_assessment() 
+    # that takes in an integer parameter hours 
+    # indicating the number of hours the user slept.
+    # If hours is less than 8, 
+        # print "Oof, go back to bed!".
+    # If hours is greater than or equal to 8 and less than or equal to 10, 
+        # print "You got a good night's rest!".
+    # If hours is greater than 10, 
+        # print "You're a sleep prodigy!".
+def sleep_assessment(hours):
+    if hours < 8:
+        print("Oof, go back to bed!")
+    if hours >= 8 and hours <= 10:
+        print("You got a good night's rest!")
+    if hours > 10:
+        print("You're a sleep prodigy!")
+
+sleep_assessment(10)
+sleep_assessment(4)
+sleep_assessment(12)
+sleep_assessment(9)
+# What did you learn? Usually the way something is written in plain english is the way to write it in code.
+
+print("-------------------------------------------------------------------")
+# Problem 5: Calculate tip
+    # Write a function calculate_tip() 
+    # that takes in a float bill a
+    # nd a string service_quality as parameters.
+    # If service_quality is "poor", 
+        # the function should return 10% of the bill value.
+    # If service_quality is "average", 
+        # the function should return 15% of the bill value.
+    # If service_quality is "excellent", 
+        # the function should return 20% of the bill value.
+    # If service_quality is any other value, 
+        # the function should return None.
+
+
+
