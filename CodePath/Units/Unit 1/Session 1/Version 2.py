@@ -71,8 +71,8 @@ sleep_assessment(9)
 print("-------------------------------------------------------------------")
 # Problem 5: Calculate tip
     # Write a function calculate_tip() 
-    # that takes in a float bill a
-    # nd a string service_quality as parameters.
+    # that takes in a float bill 
+    # and a string service_quality as parameters.
     # If service_quality is "poor", 
         # the function should return 10% of the bill value.
     # If service_quality is "average", 
@@ -81,6 +81,22 @@ print("-------------------------------------------------------------------")
         # the function should return 20% of the bill value.
     # If service_quality is any other value, 
         # the function should return None.
-
-
+def calculate_tip(bill, service_quality): 
+    if service_quality =="poor":
+        return bill * 0.1
+    elif service_quality == "average":
+        return bill * 0.15
+    elif service_quality == "excellent":
+        return bill * 0.2
+    else:
+        return None
+        # the function should return None.
+tip1 = calculate_tip(44.53, "average")
+print(tip1)
+tip2 = calculate_tip(44.53, "poor")
+print(tip2)
+tip3 = calculate_tip(44.53, "excellent")
+print(tip3)
+# What did you learn? I do not need to initialize the variables bill and service quality to indicate that they are integers or floats
+    # When you do need to initialize is when you create a counter, a running total of some values, a list I am building, a temorary variable, a default value I plan to update etc. 
 
