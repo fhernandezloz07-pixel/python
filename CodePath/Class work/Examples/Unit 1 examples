@@ -1,0 +1,30 @@
+# Session 2: Sample problem 1 IN CLASS
+# Write a function above_threshhold() that takes in a list of integers nums 
+# and an integer threshold as parameters. The function iterates through the 
+# original list and returns a new list containing only numbers that are greater 
+# than threshold. 
+
+# Create structure of our function, including input and output
+# Create a new list, which will be returned
+# Iterate through the list of nums, for loop
+# If statement, checking against threshold
+# Return that new list 
+
+# nums = [8, 12, 13, 11, 4, 10, 14]
+# threshold = 10
+# output = [13, 11, 14]
+
+def above_threshold(nums, threshold):
+    final_list = []
+    for num in nums:
+        if (num > threshold):
+            final_list.append(num)
+
+    return final_list
+
+print("Test run", above_threshold([8, 12, 13, 11, 4, 10, 14], 10)) # The threshold is 10
+
+# output = [13, 11, 14]
+
+# Session 2: Version 1
+# Problem 1
