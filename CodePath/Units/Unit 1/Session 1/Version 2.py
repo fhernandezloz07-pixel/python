@@ -100,3 +100,89 @@ print(tip3)
 # What did you learn? I do not need to initialize the variables bill and service quality to indicate that they are integers or floats
     # When you do need to initialize is when you create a counter, a running total of some values, a list I am building, a temorary variable, a default value I plan to update etc. 
 
+print("-------------------------------------------------------------------")
+# Problem 6: Rock, Paper, Scissors
+    # Write a function rock_paper_scissors() 
+    # that determines the winner of a game of Rock, Paper, Scissors. 
+    # The function accepts two strings as parameters: 
+        # player1 and player2. 
+    # Each parameter can have a value of "rock", "paper", or "scissors".
+    # Print either "Player 1 wins!" or "Player 2 wins!" 
+    # according to the following rules:
+        # Rock wins against scissors.
+        # Scissors wins against paper.
+        # Paper wins against rock.
+    # If both player1 and player2 have the same value,
+        # print "It's a tie!".
+def rock_paper_scissors(player1, player2):
+    # Check if the inputs are valid (This is optional for this program but it's good practice!)
+    if player1 not in ["rock", "paper", "scissors"]:
+        return "Invalid input for player1"
+    if player2 not in ["rock", "paper", "scissors"]:
+        return "Invalid input for player2"
+    # If both player1 and player2 have the same value,
+    if player1 == player2:
+        print("It's a tie!")
+        return
+    # Rock wins against scissors.
+    if player1 == "rock" and player2 == "scissors" :
+        print("Player 1 wins!")
+        return
+    if player2 == "rock" and player1 == "scissors" :
+        print("Player 2 wins!")
+        return
+    # Scissors wins against paper.
+    if player1 == "scissors" and player2 == "paper" :
+        print("Player 1 wins!")
+        return
+    if player2 == "scissors" and player1 == "paper" :
+        print("Player 2 wins!")
+        return
+    # Paper wins against rock.
+    if player1 == "paper" and player2 == "rock" :
+        print("Player 1 wins!")
+        return
+    if player2 == "paper" and player1 == "rock" :
+        print("Player 2 wins!")
+        return
+    
+rock_paper_scissors("rock", "rock")
+rock_paper_scissors("scissors", "rock")
+rock_paper_scissors("scissors", "paper")
+rock_paper_scissors("rock", "paper")
+rock_paper_scissors("paper", "rock")
+print("---------------------------------")
+
+# another even simpler way of doing it!
+    # This one takes all the possible scenarios of only one player winning 
+    # and then it prints the other player winning 
+    # if none of these prove to be the case. 
+def rock_paper_scissors(player1, player2):
+    if player1 not in ["rock", "paper", "scissors"]:
+        return "Invalid input for player1"
+    if player2 not in ["rock", "paper", "scissors"]:
+        return "Invalid input for player2"
+
+    if player1 == player2:
+        print("It's a tie!")
+    elif player1 == "rock" and player2 == "scissors":
+        print("Player 1 wins!")
+    elif player1 == "scissors" and player2 == "paper":
+        print("Player 1 wins!")
+    elif player1 == "paper" and player2 == "rock":
+        print("Player 1 wins!")
+    else:
+        print("Player 2 wins!")
+
+rock_paper_scissors("rock", "rock")
+rock_paper_scissors("scissors", "rock")
+rock_paper_scissors("scissors", "paper")
+rock_paper_scissors("rock", "paper")
+rock_paper_scissors("paper", "rock")
+
+print("-------------------------------------------------------------------")
+# Problem 7: Unscramble and Divide
+
+    
+    
+
