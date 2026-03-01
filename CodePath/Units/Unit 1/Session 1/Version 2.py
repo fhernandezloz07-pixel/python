@@ -42,3 +42,6 @@ def concatenate_list(nums): # Create a fucntion concatenate_list()
 # Concatenation is joining two pieces of data end-to-end, like sticking them together to form one longer sentence. 
     # in lists it can be [1, 2] + [3, 4] = [1, 2, 3, 4]
     # in strings it can be "hello" + "world" = "helloworld"
+
+print("-------------------------------------------------------------------")
+# Problem 4: 

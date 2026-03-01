@@ -26,5 +26,3 @@ print("Test run", above_threshold([8, 12, 13, 11, 4, 10, 14], 10)) # The thresho
 
 # output = [13, 11, 14]
 
-# Session 2: Version 1
-# Problem 1
