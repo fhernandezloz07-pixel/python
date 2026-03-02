@@ -36,8 +36,9 @@ def concatenate_list(nums): # Create a fucntion concatenate_list()
     for i in range(n): # for 0 <= i < n (0-indexed).
         ans[i] = nums[i] # where ans[i] == nums[i] 
         ans[i + n] = nums[i] # and ans[i + n] == nums[i] 
-        return ans # also returns a list ans 
-    
+    return ans # also returns a list ans 
+
+print(concatenate_list([1, 2, 3, 4]))
 # What did you learn? 
 # Concatenation is joining two pieces of data end-to-end, like sticking them together to form one longer sentence. 
     # in lists it can be [1, 2] + [3, 4] = [1, 2, 3, 4]
@@ -182,7 +183,85 @@ rock_paper_scissors("paper", "rock")
 
 print("-------------------------------------------------------------------")
 # Problem 7: Unscramble and Divide
+    # Given the following lines of code, place the lines in order
+    #  to write and call a function that divides each value in an input list by 2.
+        # a. result = []
+        # b. for number in lst:
+        # c. result.append(halved)
+        # d. halved = number/2
+        # e. halve_lst([2,4,6,8])
+        # f. return result
+        # g. def halve_lst(lst):
+def halve_lst(lst):
+    result = []
+    for number in lst:
+        halved = number/2
+        result.append(halved)
+    return result
 
-    
-    
+print(halve_lst([2,4,6,8]))
 
+# correct order example
+def triple_lst(lst):
+    result = []
+    for number in lst:
+        multiplied = number * 3
+        result.append(multiplied)
+    return result
+
+print(triple_lst([1, 2, 3, 4]))
+# What did you learn? 
+# Append function adds something to the end of whatever you are workking on.
+# In this case it applies to every number inside the list it is multiplied by 3!
+
+print("-------------------------------------------------------------------")
+# Problem 8: Above the Threshold
+    # Write a function above_threshold() 
+    # that takes in a list of integers lst and an integer threshold as parameters. 
+    # The function should iterate through the original list 
+    # and return a new list containing only numbers that are greater than threshold.
+    
+def above_threshold(lst, threshold): 
+    result = [] # new List to store numbers above threshold
+    for num in lst: # We need to check that each number is above threshold so run through each number!!
+        if  num > threshold:
+            result.append(num) # in the empty list, append or add the numbers that are above the threshold
+    return result
+
+print(above_threshold([8, 2, 13, 11, 4, 10, 14], 10)) # the 10 is the threshold!
+
+print("-------------------------------------------------------------------")
+# Problem 9: Countdown
+    # Write a function countdown() 
+    # that takes in two positive integers m and n as parameters 
+    # and prints numbers from m down to n.
+def countdown(m, n):
+    for i in range(m, n - 1, -1): 
+       # start at 5, 
+       # stop at n - 1 because stop is exclusive and we want it to be inclusive
+       #Step: -1 to count down 
+       print(i)
+
+countdown(5, 1)
+# What did you learn? 
+    # When using range, think critically about what you want to do, where you want to start
+    # and when you want to stop somewhere remember the code is exclusive so do -1
+    # the step is to show that we actually want it to do, which is decrease (tep by -1 each time)
+
+print("-------------------------------------------------------------------")
+# Problem 10: Calculate Power
+    # Write a function power() 
+    # that takes in two integers base and exponent. 
+    # The function should return the value of the base number to the power of the exponent.
+
+def power(base, exponent): 
+    accumulator = 1 # this is the starting point because multiplying by one doesnt change the value
+    for i in range(exponent): # loops exactly exponent amount of times!
+        accumulator *= base # nultiply the accumulator times the base
+        # think about it as the base being multiplied by itself so long as we dont run out of exponent!
+    return accumulator
+
+pow1 = power(2, 5) 
+print(pow1)
+pow2 = power(3, 3)
+print(pow2)
