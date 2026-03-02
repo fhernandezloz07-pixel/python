@@ -265,3 +265,105 @@ pow1 = power(2, 5)
 print(pow1)
 pow2 = power(3, 3)
 print(pow2)
+
+print("-------------------------------------------------------------------")
+# Problem 11: Length of List
+    # Without using the built-in len() function,
+    # write a function list_length() 
+    # that takes in a list lst as a parameter 
+    # and returns the length of the list.
+def list_length(lst):
+    length = 0 # Start at 0
+    for num in lst: # iterate through every single number in the list to try and figure out how many numbers are being iterated through
+        length += 1 # add by one each time
+    return length
+
+lst = [2,4,6,8,10]
+length = list_length(lst)
+print(length)
+
+print("-------------------------------------------------------------------")
+# Problem 12: Calculate factorial
+    # Write a function factorial() 
+    # that takes in an integer n as a parameter 
+    # and returns its factorial. 
+    # The factorial of a number is:
+        # the product of all positive integers less than or equal to that number. 
+            # For example:
+            # 5! = 5 * 4 * 3 * 2 * 1 which equals 120.
+# brainstorm, im thinking of using range to count down
+def factorial(n):
+    result = 1 # initialize result to 1, never 0 in this case because we are multiplying
+    for num in range(n, 0, -1): # stop is 0 because its exclusive, -1 because we are counting down, and n for the intitial number
+        result *= num # so we multiply by num because the numbers are the ones we are using for our loop
+    return result
+
+print(factorial(3))
+# what did you learn? 
+    # accumulator -> loop -> update -> return. 
+    # num in this case is the part that changes every time the loop runs.
+        # if n = 5, the sequence is 5, 4, 3, 2, 1
+        # if n = 3, the sequence is 3, 2, 1
+
+print("-------------------------------------------------------------------")
+# Problem 13: Calculate the squares
+    # Write a function squares() 
+    # that takes a list of integers nums as a parameter 
+    # and returns a new list 
+    # containing the square of each number in the original list.
+def squares(nums):
+    result = [] # this is the new initialized list
+    for i in nums:
+        result.append(i * i) # Square each number in the original list (so to the power of 0.5)
+    return result
+
+print(squares([1,2,3,4]))
+# What did you learn? 
+    # Each time we do a specific thing to each element in a list 
+    # we use append because it runs our loop for each element!
+        # takes an element, proesses the command, 
+        # then starts over with the same command 
+        # on the next number 
+        # until there are no more numbers left!
+
+print("-------------------------------------------------------------------")
+# Problem 14: Multiply List
+    # Write a function multiply_list() 
+    # that takes in a list of integers lst 
+    # and an integer multiplier as parameters.
+    # The function returns a new list 
+    # containing each value in lst multiplied by multiplier.
+def multiply_list(lst, multiplier):
+    result = [] # Creation of a new list
+    for num in lst: # for each number in our original list lst do the following...
+        result.append(num * multiplier)
+    return result
+
+# lst = [1,2,3]
+# new_lst = multiply_list(lst, 3)
+
+print("result =", multiply_list([1,2,3], 3))
+# What did you learn?
+    # look carefully at what you are mulipying, 
+    # whether it is the entire list itself (lst), 
+    # or each element in the list(num) by the multiplier
+
+print("-------------------------------------------------------------------")
+# Problem 15: Count evens 
+    # Write a function count_evens() 
+    # that takes in a list of integers lst as a parameter.
+    # The function returns the number of even numbers in the list.
+def count_evens(lst):
+    count_evens = 0 
+    for nums in lst:
+        if nums %2 == 0: # Checking if even      
+            count_evens += 1
+    return count_evens
+
+lst1 = [1,5,7,9]
+count1 = count_evens(lst1)
+print(count1)
+
+lst2 = [2,4,6,8]
+count2 = count_evens(lst2)
+print(count2)
