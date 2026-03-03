@@ -101,6 +101,29 @@ print(max_diff)
     # I also found out that I have to do returns on everything even if it's not a loop! 
         # for example max_diff variable 
 
-    
+print("-----------------------------------------------------------")
+# Problem 6: Below Threshold
+    # Write a function count_less_than() 
+    # that takes in a list of integers numbers 
+    # and an integer threshold as parameters 
+    # and returns the number of items in numbers 
+    # that are less than threshold.
+def count_less_than(numbers, threshold):
+    counter = 0 # initialoze the counter to 0
+    for items in numbers:
+        if items < threshold:
+            counter += 1
+    return counter
 
+numbers = [12,8,2,4,4,10]
+counter = count_less_than(numbers, 5) # 5 is the threshold
+    # 2 different ways to print something
+print(counter)
+print(count_less_than(numbers, 5))
+
+# What did I learn? 
+    # the counter must always be initialized to o in this case because we accumulate the number of elements in our list
+    # we don't need to set the threshold to something, the example usage usually does that for us
+    # print the created variable counter, printting our function with our original list inside also works
+        # but we have to remember to add the threshold
 
