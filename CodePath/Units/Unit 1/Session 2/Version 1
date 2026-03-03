@@ -73,15 +73,15 @@ print("-----------------------------------------------------------")
     # and returns the difference 
     # between the smallest and largest value in the list.
 def max_difference(lst):
-    if lst == []:
+    if lst == []: # Add == because we are determining if this is true or not
         return None # Accounts for empty list
     
     # Step 1: Find Max
-    max_num = lst[0]
-    for num in lst:
+    max_num = lst[0] # initialize at the first number in the list; call list then at what index you want it
+    for num in lst: # for every number in the list run a loop that checks if tha number is greater than num_lst. Runs for each number 
         if num > max_num:
-            max_num = num 
-    
+            max_num = num # replace if there is a number actually greater than the previous number in the list, runs throuhg entire list
+    # findind the min is the same steps basically!
     # Step 2: find min 
     min_num = lst[0]
     for num in lst:
