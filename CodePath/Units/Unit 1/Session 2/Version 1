@@ -25,3 +25,19 @@ doubled(lst)
     # if there is already a print in a loop then most likely you wont need to print again
     # just return the function with the variable inside
 
+print("-----------------------------------------------------------")
+# Problem 3: Return Doubled List
+    # Modify the function doubled() 
+    # so that instead of printing the items, 
+    # it returns a new list of the doubled numbers.
+def doubled(lst): 
+    new_lst = []
+    for item in lst: 
+        new_lst.append(item * 2) # created a new list and appended the new items to it!
+
+lst = [1, 2, 3]
+print(doubled(lst)) # printing the doubled lst because lst is the one being run through the loop
+# What did you learn? 
+    # for you to print a new list with new numbers on it based on the old list and numbers:
+        # create a new list, run a loop an dinside append the new list, and print the function with the original list inside.
+        
