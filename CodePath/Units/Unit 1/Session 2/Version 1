@@ -128,7 +128,7 @@ print(count_less_than(numbers, 5))
         # but we have to remember to add the threshold
 
 print("-----------------------------------------------------------")
-# Problem 7:
+# Problem 7: Evens List
     # Write a function get_evens() 
     # that takes in a list of integers lst as a parameter 
     # and returns a list of all even numbers in the list.
@@ -146,6 +146,20 @@ print(evens_lst)
 # What did you learn?
     # remember to actually make an example list so something can be displayed.
     # also remebrer that every time you want to get an even you can youse the modulus variable!!
+
+print("-----------------------------------------------------------")
+# Problem 8: Multiples of 5 (Think about using the start, stop, step)
+    # Write a function multiples_of_five() 
+    # that prints out multiples of 5 
+    # between 1 and 100 (inclusive).
+def multiples_of_five():
+    for num in range(5, 101, 5):
+        print(num)
+multiples_of_five()
+# What did you learn?   
+    # Although the code says that the range is between 1 and 100,
+    # we initialoze at inclusive 5 multiple, and end at 101 so we can include 100. 
+
 
 
 
