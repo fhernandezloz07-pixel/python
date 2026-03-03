@@ -1,0 +1,11 @@
+# Problem Set Version 1: 
+# Problem 1: Print List
+    # Write a function print_list() 
+    # that takes in a list lst as a parameter 
+    # and prints out each item in the list.
+def print_list(lst):
+    for item in lst: # for every item in the list 
+        print(item) # print the item
+
+lst = ["squirtle", "gengar", "charizard", "pikachu"]
+print_list(lst)
