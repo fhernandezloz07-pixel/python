@@ -9,3 +9,19 @@ def print_list(lst):
 
 lst = ["squirtle", "gengar", "charizard", "pikachu"]
 print_list(lst)
+
+print("-----------------------------------------------------------")
+# Problem 2: Print Doubled List Items
+    # Write a function doubled() 
+    # that takes in a list of integers lst as a parameter 
+    # and prints each item in the list multiplied by two.
+def doubled(lst): # lst as a parameter
+    for item in lst: # for each item in the list
+        print(item * 2)
+
+lst = [1, 2, 3]
+doubled(lst) 
+# What did you learn? 
+    # if there is already a print in a loop then most likely you wont need to print again
+    # just return the function with the variable inside
+
