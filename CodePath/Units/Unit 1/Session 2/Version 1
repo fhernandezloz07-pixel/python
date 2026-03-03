@@ -40,4 +40,30 @@ print(doubled(lst)) # printing the doubled lst because lst is the one being run 
 # What did you learn? 
     # for you to print a new list with new numbers on it based on the old list and numbers:
         # create a new list, run a loop an dinside append the new list, and print the function with the original list inside.
-        
+
+print("-----------------------------------------------------------")
+# Problem 4: Flip signs 
+    # Write a function flip_sign() 
+    # that takes in a list of integers lst as a parameter 
+    # and returns a new list 
+    # where each number in the original list 
+    # has been multiplied by -1.
+def flip_sign(lst):
+    flipped_lst = [] # initialize the new list
+    for items in lst:
+        flipped_lst.append(items * -1)
+    return flipped_lst
+
+lst = [1,-2,-3,4]
+flipped_lst = flip_sign(lst)
+
+print(flipped_lst)
+print(flip_sign(lst))
+# What did you learn? 
+    # Each time you want to create a new list:
+        # initialize it
+        # Run a loop and inide with the append
+    # printing the new list and pringting the finction with the original list inside is the same thing
+    
+
+
