@@ -127,3 +127,25 @@ print(count_less_than(numbers, 5))
     # print the created variable counter, printting our function with our original list inside also works
         # but we have to remember to add the threshold
 
+print("-----------------------------------------------------------")
+# Problem 7:
+    # Write a function get_evens() 
+    # that takes in a list of integers lst as a parameter 
+    # and returns a list of all even numbers in the list.
+def get_evens(lst):
+    even_lst = []
+    for num in lst:
+        if num %2 == 0:
+            even_lst.append(num)
+    return even_lst
+
+lst = [1,2,3,4]
+evens_lst = get_evens(lst)
+
+print(evens_lst)
+# What did you learn?
+    # remember to actually make an example list so something can be displayed.
+    # also remebrer that every time you want to get an even you can youse the modulus variable!!
+
+
+
