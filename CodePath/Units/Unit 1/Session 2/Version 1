@@ -95,6 +95,11 @@ def max_difference(lst):
 lst = [5,22,8,10,2]
 max_diff = max_difference(lst)
 print(max_diff)
+# What did you learn? 
+    # if I have to test multiple things at a time go step by stem 
+        # find the max first, then find the min and run the loop for each number
+    # I also found out that I have to do returns on everything even if it's not a loop! 
+        # for example max_diff variable 
 
     
 
