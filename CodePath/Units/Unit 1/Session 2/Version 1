@@ -160,6 +160,19 @@ multiples_of_five()
     # Although the code says that the range is between 1 and 100,
     # we initialoze at inclusive 5 multiple, and end at 101 so we can include 100. 
 
+print("-----------------------------------------------------------")
+# Problem 9: Divisors 
+    # Write a function find_divisors() 
+    # that takes in an integer n as a parameter 
+    # that returns a list of all divisors of n.
+def find_divisors(n): # so if n equals 6 there must be a list of the numbers in alist divisible by 6
+    new_lst = [] # create a new list and initialize to empty list
+    for item in range(1, n + 1): # for every item in the list with range 1 to inclusive n (start at 1 bc 0/n = 0)
+        if n % item == 0: # if the divisor can be divided by the item without giving a decimal ...
+            new_lst.append(item) # print it!
+    return new_lst # return 
 
+lst = find_divisors(6) # the divisor is 6
+print(lst) 
 
 
