@@ -1,0 +1,15 @@
+# Version 1: 
+# Problem 1: All in
+    # Write a function all_in() 
+    # that takes in a list of integers a 
+    # and a list of integers b as parameters. 
+    # Given these two lists, 
+    # return True if every element in list a is in list b.
+    #  Return False otherwise.
+
+def all_in(a, b):
+    for num in a:
+        if num not in b:
+            return False # for any elements in a that are not in b
+    return True # assuming all elements from a are in b
+
