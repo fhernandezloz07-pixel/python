@@ -225,3 +225,6 @@ print_indices(lst)
 # lst = [1,2,3,4]
 # index_difference(lst)
 
+ # What did you learn? 
+    # I learned that I can use len(lst) to take in at that range 
+    # of the specified item i am running through a loop.
