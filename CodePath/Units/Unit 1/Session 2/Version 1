@@ -175,4 +175,27 @@ def find_divisors(n): # so if n equals 6 there must be a list of the numbers in 
 lst = find_divisors(6) # the divisor is 6
 print(lst) 
 
+print("-----------------------------------------------------------")
+# Problem 10: FizzBuzz
+    # Write a function fizzbuzz() 
+    # that takes in an integer n as a parameter 
+    # and prints the numbers from 1 to n.
+        # For multiples of 3, 
+    # print "Fizz" instead of the number.
+        # 3 For multiples of 5, 
+    # print "Buzz" instead of the number.
+def fizzbuzz(n):
+    for items in range(1, n + 1):
+        if items %3 == 0 and items %5 == 0:
+            print("FizzBuzz")
+        elif items %3 == 0:
+            print("Fizz")
+        elif items %5 == 0:
+            print("Buzz")
+        else:
+            print(items)
+
+fizzbuzz(13)
+# What did you learn? 
+
 
