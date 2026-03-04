@@ -197,5 +197,8 @@ def fizzbuzz(n):
 
 fizzbuzz(13)
 # What did you learn? 
+    # Don't use range for the if statements, use the modulus
+    # this is because modulus checks better if the numbers are multiples of 3 or 5
+    # if the modulus == 0 then they are multiples and we can print!
 
 
