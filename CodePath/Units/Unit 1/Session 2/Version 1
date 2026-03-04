@@ -215,4 +215,13 @@ def print_indices(lst):
 
 lst = [5,1,3,8,2]
 print_indices(lst)
-    # Similar examples: 
+    # Similar examples: - 
+        # Write a function that prints the difference between each value and its index.
+# def index_difference(lst):
+#     for items in range(len(lst)):
+#         diff = lst[items] - items
+#         print(diff)
+    
+# lst = [1,2,3,4]
+# index_difference(lst)
+
