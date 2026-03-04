@@ -201,4 +201,18 @@ fizzbuzz(13)
     # this is because modulus checks better if the numbers are multiples of 3 or 5
     # if the modulus == 0 then they are multiples and we can print!
 
+print("-----------------------------------------------------------")
+# Problem 11: Print the index
+    # Write a function print_indices() 
+    # that takes in an integer list lst as a parameter 
+    # and prints out the index of each item in the given list.
+    # Use the function range() 
+    # to loop through the list indices.
+def print_indices(lst):
+    print_indices = 0 # initialize the index to 0
+    for items in range(len(lst)):
+        print(items)
 
+lst = [5,1,3,8,2]
+print_indices(lst)
+    # Similar examples: 
