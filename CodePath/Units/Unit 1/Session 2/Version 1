@@ -236,10 +236,23 @@ print("-----------------------------------------------------------")
     # The function returns the index of target in lst if found. 
     # If target is not found in lst, 
         # return -1.
+# Important information: 
+    # liner search is just:
+        # Look at each item in the list one by one.
+        # Compare it to the target.
+        # If it matches → return the index.
+
+# Plan: for example if we are looking for target nuber 5 but we don't find it we return
+# the number -1, if we do find the target number 5 we return the number representing the index 
+# in the list it is found.
 def linear_search(lst, target):
     position = 0
-    for item in range(len(lst)):
+    # Look through the list until you find the target value, 
+        # and tell me the index where it appears.
+    for item in range(len(lst)): 
         
+
+        if 
     return position
 
 lst = [1,4,5,2,8]
