@@ -246,15 +246,16 @@ print("-----------------------------------------------------------")
 # the number -1, if we do find the target number 5 we return the number representing the index 
 # in the list it is found.
 def linear_search(lst, target):
-    position = 0
     # Look through the list until you find the target value, 
         # and tell me the index where it appears.
-    for item in range(len(lst)): 
-        
-
-        if 
-    return position
+    for i in range(len(lst)): # for i, standing for item in the range anywhere between the list 
+        if lst[i] == target: # if the list at the index of the intem is equal to the target 
+            return i # return the item index
+    return -1
 
 lst = [1,4,5,2,8]
-position = linear_search(lst,5)
-print(position)
+print(linear_search(lst))
+# what did you learn?
+    # when we write a loop like:
+    # for i in range(len(lst)): the i represents the location of the i and iside the loop the i represents the actual number i.
+
