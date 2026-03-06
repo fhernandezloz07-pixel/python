@@ -1,4 +1,4 @@
-# PROBLEM
+# PROBLEM 1
 # Given a list of strings words, 
 # group the strings that are anagrams of each other.
     # An anagram is defined 
@@ -48,3 +48,38 @@ def groups_anagrams(words):
 print(groups_anagrams(words))
 
 # What did I learn? 
+
+# PROBLEM 2
+# understand (inputs, outputs, datatypes, core logic)
+'''
+input: tuples, always same size, 0 category,1 value(item)
+Output: dictionary, keys categories, values will be the count
+logic: want to group and count by category
+'''
+
+# - Input: items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana")]
+# - Output: {"fruits": 2, "vegetables": 1}
+'''
+
+'''
+# Plan (Hint: how do we use dictionaries to grouo things together?)
+
+# Implement
+def count_by_category(items):
+    count_dictionary = {} # starts emty: key, category, values: count #
+
+    for item in items: 
+    # item is a tuple, 0, 1
+        current_category = item[0]
+
+        if current_category not in count_dictionary:
+            # its the 1st time we are seeing it
+            count_dictionary[current_category] = 1
+        else:
+            # we have seen it before
+            count_dictionary[current_category] += 1
+
+    return count_dictionary
+
+# Test it
+test_items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana")]
