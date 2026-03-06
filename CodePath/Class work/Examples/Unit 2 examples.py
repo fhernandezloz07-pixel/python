@@ -85,3 +85,4 @@ test_items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana"
     # in thi example tuple has two pieces of info
         # index 0 -> "fruits"
         # index 1 -> "apple"
+print(count_by_category())
