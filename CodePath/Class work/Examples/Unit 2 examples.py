@@ -22,7 +22,6 @@ words = ["eat", "tea", "tan", "ate", "nat", "bat"]
 '''
 
 # Implement
-
 def groups_anagrams(words):
     anagram_dictionary = {} # tracking aet to a list of  words that fit that category
     # aet -> [tea, eat, ate]
@@ -39,16 +38,12 @@ def groups_anagrams(words):
 
     return list(anagram_dictionary.values())
 
-
-
-
-
-
 # Test run
 print(groups_anagrams(words))
 
 # What did I learn? 
 
+print("-------------------------------------------------------------------------------")
 # PROBLEM 2
 # understand (inputs, outputs, datatypes, core logic)
 '''
@@ -59,6 +54,7 @@ logic: want to group and count by category
 
 # - Input: items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana")]
 # - Output: {"fruits": 2, "vegetables": 1}
+    # This is because there are 2 fruit categories and only one vegetable category
 '''
 
 '''
@@ -66,12 +62,13 @@ logic: want to group and count by category
 
 # Implement
 def count_by_category(items):
-    count_dictionary = {} # starts emty: key, category, values: count #
+    count_dictionary = {} # starts emty dictionary: key = category, values = count 
 
-    for item in items: 
+    for item in items: # Each item becomes a tuple like ("fruits", "apple")
     # item is a tuple, 0, 1
-        current_category = item[0]
-
+        current_category = item[0] # extract the category only!!!
+    
+    # Count the Categories
         if current_category not in count_dictionary:
             # its the 1st time we are seeing it
             count_dictionary[current_category] = 1
@@ -83,3 +80,8 @@ def count_by_category(items):
 
 # Test it
 test_items = [("fruits", "apple"), ("vegetables", "carrot"), ("fruits", "banana")]
+# Tuple is like a small container that keeps related information grouped: 
+# something like ("fruits", "apple")
+    # in thi example tuple has two pieces of info
+        # index 0 -> "fruits"
+        # index 1 -> "apple"
