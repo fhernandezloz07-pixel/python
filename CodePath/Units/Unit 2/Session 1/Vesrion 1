@@ -7,9 +7,26 @@
     # return True if every element in list a is in list b.
     #  Return False otherwise.
 
+
+# U: 
+# Check if all the elements in list A are in list B
+
+# P: 
+# define the cunction, write a for loop to check for all num in a
+# if the numbers from a are not in b then return false 
+# return true if false is not the case, meaning all the numbers ARE in a
+# print true or false
+
+# I:
 def all_in(a, b):
     for num in a:
         if num not in b:
             return False # for any elements in a that are not in b
     return True # assuming all elements from a are in b
+lst_1 = [1, 2]
+lst_2 = [1, 2, 3]
+
+print(all_in(lst_1, lst_2)) # in this case list 1 is a and list 2 is b
+print(all_in(lst_2, lst_1)) # in this case list 2 is a and list 1 is b
+
 

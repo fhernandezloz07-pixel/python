@@ -26,15 +26,15 @@ def groups_anagrams(words):
     anagram_dictionary = {} # tracking aet to a list of  words that fit that category
     # aet -> [tea, eat, ate]
 
-    for word in words:
+    for word in words: # for a specific work inside the list words
         sorted_word = str(sorted(word)) # eat -> aet, tea -> aet, ate -> aet
    
     # if thing is in dictionary
     # else if thing is not in dictionary
-        if sorted_word not in anagram_dictionary:
-            anagram_dictionary[sorted_word] = [word] # then add it to anagram dictionary if not in it!
+        if sorted_word not in anagram_dictionary: # not in is useful 
+            anagram_dictionary[sorted_word] = [word] # if sorted word not in anagram dictionary add it there and make it there and make equal to the original word in words
         else: 
-            anagram_dictionary[sorted_word].append(word) # access that list 
+            anagram_dictionary[sorted_word].append(word) # access that list and append to it the new sorted word
 
     return list(anagram_dictionary.values())
 
