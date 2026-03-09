@@ -30,6 +30,29 @@ print(all_in(lst_1, lst_2)) # in this case list 1 is a and list 2 is b
 print(all_in(lst_2, lst_1)) # in this case list 2 is a and list 1 is b
 
 print("-------------------------------------------------------------")
+
+# Dictionary: A dictionary in python is a data structure used to store pairs of information
+    # a key and a value. Ex: in a dictionary a word(key) is connected to its definition(value)
+# a key is used to look up a value
+# keys must be unique
+# Values can be any type (numbers, strings, lists etc)
+# Dicitionaries are written using curly braces {}
+    # a list is different because instead of calling an index to look for an element,
+    # in a dictionary you call a key to look for a value
+    
+# Example code 1:
+student = {"name": "Fatima", "age": 18, "Major": "Mathematics & Electrical Engineering"}
+print(student['name'])
+student["gpa"] = 3.6 # add a value to the dictionary
+print(student["gpa"])
+
+# Example code 2:
+phoneBook = {"mary": "312-589-8906", "robert": "773-543-1234", "mark": "773-0553-7294"}
+print(phoneBook["robert"]) # to call things to print within the dictionary use [] and not (). Remmember to also use "" for string
+
+
+
+print("-------------------------------------------------------------")
 # Problem 2: Create a Dicitonary
     # Write a function create_dictionary() 
     # that takes in a list of keys and a list of values as parameters.
@@ -39,13 +62,6 @@ print("-------------------------------------------------------------")
     # keys[i] should be paired with values[i] 
     # in the dictionary where 0 <= i <= len(keys).
     # You may assume keys and values are the same length.
-
-# Dictionary: A dictionary in python is a data structure used to store pairs of information
-    # a key and a value. Ex: in a dictionary a word(key) is connected to its definition(value)
-# a key is used to look up a value
-# keys must be unique
-# Values can be any type (numbers, strings, lists etc)
-# Dicitionaries are written using curly braces {}
 
 # U: 
 
