@@ -311,6 +311,48 @@ print(calculate_gpa(report_card))
 # Bigest tke away: you got this bru! You know this jut believe in yourself!
 
 print("-------------------------------------------------------------")
-# Problem 7:
+# Problem 7: Best Book
+    # Write a function named highest_rated() 
+    # that returns the book with the highest rating.
+    # The function should take in a list of dictionaries named books as a parameter. 
+    # Each dictionary represents data associated with a book: 
+        # including its title, author, and rating. 
+    # The function should return the dictionary for the book with the highest rating.
+'''
+U: we have to retunr the dictionary of the book with the highest rating
+meaning we should return the title, the author, and the rating 
 
+P: 
+define a function with the right parameter
+for an item at an index i in the list, which is the fist library
+------how do i retrieve one key from an indez in a list?!?!
+
+Note to self: is book the dictionary itself or are the three separate onses inside it 3 actual different dictionaries. 
+if the latter then this is more logical and easier! 
+Wait i think books is a list and wthin the list there are 3 different dictionaries, that make sos much more sense!!!
+'''
+# I: 
+def highest_rated(books):
+    best_book = books[0] # assume the best book is the first, it will update if its actually not!!
+    for book in books: # wait now I want to call 
+        if book["rating"] > best_book["rating"]:
+            best_book = book
+    return best_book
+books = [
+    {"title": "Tomorrow, and Tomorrow, and Tomorrow",
+     "author": "Gabrielle Zevin",
+     "rating": 4.18
+    },
+    {"title": "A Fortune For Your Disaster",
+     "author": "Hanif Abdurraqib",
+     "rating": 4.47
+    },
+    {"title": "The Seven Husbands of Evenlyn Hugo",
+     "author": "Taylor Jenkins Reid",
+     "rating": 4.40
+    }
+]
+print(highest_rated(books))
+# What did you learn? 
+# a list can contain a 
 
