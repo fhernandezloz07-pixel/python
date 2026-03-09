@@ -133,6 +133,65 @@ print_pair(dictionary, "spongebob")
     # We have two parameters so we can ONLY use them two unless we create more or use a built-in
 
 print("-------------------------------------------------------------")
-# Problem 4:
+# Problem 4: Keys Versus Values
+    # Write a function keys_v_values() 
+    # that takes in a dictionary dictionary 
+    # whose keys and values are both integers. 
+    # Using at least one loop, 
+    # the function should find the sum of all keys in the dictionary and the sum of all values.
+    # If the sum of all keys is greater than the sum of all values, 
+        # the function should return the string "keys".
+    # If the sum of all values is greater than the sum of all keys, 
+        # the function should return the string "values".
+    # If keys and values have equal sums,
+        # the function should return the string "balanced".
+'''
+U: 
+Our function should add up all the keys in a dictiionary together
+And add up all the values in the dictionary together
+The sum which is greater of the two is returned 
+if the are both equal in sum return balanced
 
+P:
+write a function with appropiate parameters
+create two variables where you will store the separate additions (these will not be printed)
+loop: for keys in dictionary 
+    append the addition of all the keys to sum keys variable
 
+loop: for values in dictionary
+    append the addition of all the values to sum values variable
+if statement: 
+    if sum keys > sum values
+        print keys
+    if sum values > sum keys
+        print values 
+    if sum values == sum keys
+        print "balanced"
+'''
+# I:
+def keys_v_values(dictionary):
+    sum_keys = 0
+    sum_values = 0
+    for i in dictionary:
+        sum_keys += i
+        sum_values += dictionary[i]
+
+    if sum_keys > sum_values:
+        return "keys"
+    if sum_values > sum_keys:
+        return "values"
+    if sum_values == sum_keys:
+        return "balanced"
+    # do we have to have a return statement, honestly i think this is wrong :(
+
+dictionary1 = {1:10, 2:20, 3:30, 4:40, 5:50, 6:60}
+greater_sum = keys_v_values(dictionary1)
+print(greater_sum)
+
+dictionary2 = {100:10, 200:20, 300:30, 400:40, 500:50, 600:60}
+greater_sum = keys_v_values(dictionary2)
+print(greater_sum)
+# What did you learn? 
+# i was actually getting it more conceptually this time! 
+# I need to remember when to append vs when to add
+    
