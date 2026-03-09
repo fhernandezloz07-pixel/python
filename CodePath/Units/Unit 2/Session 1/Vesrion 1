@@ -86,6 +86,53 @@ def create_dictionary(keys, values):
             # paired_dictionary["name"] = "Fatima"
                 # dictionary becomes {"name": "Fatima"} and so on with the increase of i
     return paired_dictionary
+keys = ['peanut', 'dragon', 'star', 'pop', 'space']
+values = ['butter', 'fly', 'fish', 'corn', 'ship']
+print(create_dictionary(keys, values))
+# What did you learn? I can add a key and assign it to a value within an empty dictionary
+# by naming the dictionary and within addign the key at a certain index
+# then making it equal to the value we want 
 
+print("-------------------------------------------------------------")
+# Problem 3: Print Pair
+    # Write a function print_pair() 
+    # that takes in a dictionary dictionary 
+    # and a key target as parameters. 
+    # The function looks for the target and when found,
+    # it prints the key and it's associated value 
+    # as "Key: <key>" followed by "Value: <value>".
+    # If target is not in dictionary, 
+        # print "That pair does not exist!".
+
+# U: 
+# Write a function that identifies 
+# when a key is called and prints both the key and the value
+# if the given key is not in the dictionary it will say so too
+
+# P:
+# write a function with appropiate parameters
+    # if target in dictionary:
+        # print key and value
+    # else:
+        # print "That pair does not exist!"
+
+# I:
+def print_pair(dictionary, target):
+    if target in dictionary:
+        print("keys: " + target)
+        print("value: " + dictionary[target])
+    else:
+        print("That pair does not exist!")
+
+dictionary = {"spongebob": "squarepants", "patrick": "star", "squidward": "tentacles"}
+print_pair(dictionary, "patrick")
+print_pair(dictionary, "plankton")
+print_pair(dictionary, "spongebob")
+# What did you learn? 
+    # We don't always need a loop for something! 
+    # We have two parameters so we can ONLY use them two unless we create more or use a built-in
+
+print("-------------------------------------------------------------")
+# Problem 4:
 
 
