@@ -354,5 +354,6 @@ books = [
 ]
 print(highest_rated(books))
 # What did you learn? 
-# a list can contain a 
+# a list can contain dictionaries! You can easily retrieve the keys and values in the dictionary within le list
+# by treating each dcitionary as what it is; AN ELEMENT inside a list that can be called with an index
 
