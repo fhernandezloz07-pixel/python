@@ -194,4 +194,6 @@ print(greater_sum)
 # What did you learn? 
 # i was actually getting it more conceptually this time! 
 # I need to remember when to append vs when to add
-    
+    # append() is only for lists 
+    # Doctionaries use assignment -> dictionary[keys] = value
+     
