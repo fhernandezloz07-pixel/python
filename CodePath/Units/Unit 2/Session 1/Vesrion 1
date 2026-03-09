@@ -196,4 +196,60 @@ print(greater_sum)
 # I need to remember when to append vs when to add
     # append() is only for lists 
     # Doctionaries use assignment -> dictionary[keys] = value
-     
+
+print("-------------------------------------------------------------")
+# Problem 5: Restock Inventory
+    # Write a function restock_inventory() 
+    # that updates an inventory dictionary based on a restock list. 
+    # It accepts two parameters: 
+    # current_inventory: 
+        # a dictionary where each key-value pair represents 
+        # an item and its current stock in the inventory
+    # restock_list: 
+        # a dictionary where each key-value pair represents 
+        # an item and the quantity to be added to the inventory
+    # If an item in restock_list is 
+    # not present in the current_inventory, 
+        # it should be added. 
+    # The function should return the updated dictionary current_inventory.
+'''
+U: 
+Adding items to the inventory with their amounts 
+If the item is already in th inventory then we just add the original amount by the new amount
+
+P: 
+Create a function with the needed parameters
+for an item in the restock list is in the current inventory
+if the item is in the inventory then add more
+if the intem is not in the inventory already add its key with its value
+'''
+# I: 
+def restock_inventory(current_inventory, restock_list):
+    for i in restock_list: # i becomes the key in this case and not the value or item we want!
+        if i not in current_inventory: 
+            current_inventory[i] = restock_list[i] 
+        elif i in current_inventory:
+            current_inventory[i] += restock_list[i] 
+    return current_inventory
+
+current_inventory = {
+    "apples": 30,
+    "bananas": 15,
+    "oranges": 10
+}
+
+restock_list = {
+    "oranges": 20,
+    "apples": 10,
+    "pears": 5
+}
+print(restock_inventory(current_inventory, restock_list))
+# What did you learn?
+# if i ... i in this case becomes the key and not the value, keep that in mind
+# if we are looking for a key in the restock list and it is not in our current inventory
+# we call the dictinary we want to change (current_inventory) 
+# then call the key we are concerned about adding (i), 
+# and then we assign it to the correct value (restock_list[i]) 
+# which is the value for the key i in restoc_list
+# the same goes for if we do find it, same thing but this time we add to it, not simply make it equal to!!
+
