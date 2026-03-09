@@ -67,13 +67,25 @@ print("-------------------------------------------------------------")
 # P: 
 # create a fuctuon with the appropiate parameters
 # create an emmpty doctionary where we will put paired up keys and parameters 
-# for value in keys ? 
+# for i in keys 
     # if 0 <= i <= len(keys): 
         # pair up keys[i] to values[i] 
         # and append to our created dictionary
+# return the dictionary now with the appended values and keys
 
 # I:
 def create_dictionary(keys, values):
     paired_dictionary = {} 
-    
+    for i in range(len(keys)): # for i in the range of the length of keys
+        paired_dictionary[keys[i]] = values[i] 
+
+        # keys = ["name", "age", "major"]
+        # values = ["Fatima", 18, "Math"]   
+        # i = 0  
+            # paired_dictionary[keys[0]] = values[0]
+            # paired_dictionary["name"] = "Fatima"
+                # dictionary becomes {"name": "Fatima"} and so on with the increase of i
+    return paired_dictionary
+
+
 
