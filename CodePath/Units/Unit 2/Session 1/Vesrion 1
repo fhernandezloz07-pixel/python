@@ -253,3 +253,64 @@ print(restock_inventory(current_inventory, restock_list))
 # which is the value for the key i in restoc_list
 # the same goes for if we do find it, same thing but this time we add to it, not simply make it equal to!!
 
+print("-------------------------------------------------------------")
+# Problem 6: Calculate GPA
+    # Write a function calculate_gpa() 
+    # that calculates the grade point average (GPA) 
+    # for a student based on their course grades 
+    # and returns the gpa as a float. 
+    # The function takes in a dictionary report_card as a parameter
+    # where each key-value pair represents 
+    # a course and the grade received in that course respectively.
+    # The grades are represented as strings ("A", "B", "C", "D", "F")
+    # and each grade corresponds to a certain number of grade points:
+
+# "A" = 4
+# "B" = 3
+# "C" = 2
+# "D" = 1
+# "F" = 0
+
+# A GPA is calculated by finding the average of all grade points.
+
+'''
+U: 
+We take in all the courses of a student and the grade they got in each course
+with the grade we take the average to find the gpa using a scale for the letter grades
+
+P: 
+create a fucntion with the needed parameter 
+create a gpa variable that will contain the final calculation and set it eual to 0
+for a given key (course) in the dictionary (report_card):
+if value (grade) is "A" add 4 to gpa and so on test for all other letter grades 
+then add up the total amound which should already happen within the loop
+at the end divide by the number of keys in the dictionary, you could possibly use a len(i) here?
+
+'''
+# I: 
+def calculate_gpa(report_card):
+    calculated_gpa = 0 # this can be initialoized to 0 because by the time we divide this variable will no longer be 0
+    for i in report_card: # for a given key in the dictionary report_card
+        if report_card[i] == "A": # if the key of the dictionary equals A...
+            calculated_gpa += 4
+        elif report_card[i] == "B": # if the key of the dictionary equals B...
+            calculated_gpa += 3
+        elif report_card[i] == "C": # if the key of the dictionary equals C...
+            calculated_gpa += 2
+        elif report_card[i] == "D": # if the key of the dictionary equals D...
+            calculated_gpa += 1
+        elif report_card[i] == "F": # if the key of the dictionary equals F...
+            calculated_gpa += 0
+    return calculated_gpa / len(report_card)
+
+report_card = {"Math": "A", "Science": "C", "History": "A", "Art": "B", "English": "B", "Spanish": "A"}
+print(calculate_gpa(report_card))
+# What did you learn? 
+# a good UPI makes the difference but implementation makes you realize how you can change your logic from your UPI to fit the code
+# aka you relaize mistakes whe actually coding!!!
+# Bigest tke away: you got this bru! You know this jut believe in yourself!
+
+print("-------------------------------------------------------------")
+# Problem 7:
+
+
