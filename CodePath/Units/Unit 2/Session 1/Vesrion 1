@@ -357,3 +357,27 @@ print(highest_rated(books))
 # a list can contain dictionaries! You can easily retrieve the keys and values in the dictionary within le list
 # by treating each dcitionary as what it is; AN ELEMENT inside a list that can be called with an index
 
+print("-------------------------------------------------------------")
+# Problem 8: Index-Value Map
+    # Write a function index_to_value_map() 
+    # that takes in a list lst 
+    # and returns a dictionary 
+    # that maps the index of each element in lst to its value.
+'''
+U: retun a dictionary made from the original list with the keys as the index numbers 
+and the values being the original list elements
+
+P:
+write a function with the correct parameter
+create an dictionary that will store the elements we need 
+write  for loop that makes the new dictionary equal to the old list
+
+'''
+# I: 
+def index_to_value_map(lst):
+    result = {}
+    for i in range(len(lst)):
+        result[i] = lst[i]
+    return result
+lst = ["apple", "banana", "cherry"]
+print(index_to_value_map(lst))
