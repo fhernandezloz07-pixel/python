@@ -50,4 +50,40 @@ nums4 = [1,9,8,3,5]
 print(is_monotonic(nums4))
 
 print("----------------------------------------------------------------------------------")
-# Problem 2:
+# Problem 2: Student Directory
+    # Write a function student_directory() 
+    # that takes a list of student_names as a parameter
+    # and returns a dictionary of students, 
+    # where each student in student_names is a key mapped to a unique numerical ;' ID.
+'''
+U:
+For a given student name in a list, we need to return 
+a dictionary with the keys as the names in the list and the value as a number 
+perferably 1, 2, 3, 4 ... depending oh the length of the list
+
+P:
+Write a fuction with the appropiate parameter
+create an empty dictionary that will later contain the names and the numbers
+Create a loop: 
+for items in the tist
+call the dictionary name and the key and make it equal to an added value
+'''
+# I: 
+def student_dictionary(student_names):
+    listed_dictionary = {}
+    for i in range(len(student_names)): # do I need to use the len(student_names)
+        listed_dictionary[student_names[i]] = i + 1
+        # listed_dictionary[student_names[i]] = i + 1
+        # listed_dictionary[student_names[0]] = 0 + 1
+        # listed_dictionary[Ada Locelace] = 1
+            # at the list Ada lovelance make the name they key in the dictionary and equal it to 1
+            # at the list Tu Youyou make it the key and set it equal to 2
+
+    return listed_dictionary
+
+student_names = ["Ada Lovelace", "Tu Youyou", "Mae Jemison", "Rajeshwari Chatterjee", "Alan Turing"]
+print(student_dictionary(student_names))
+# What did you learn? 
+# It helps to go over each steo and retrace. 
+# Really look at what you want to do; what your parameters are
+# and what you want your keys or your values to be based on the information you have!
