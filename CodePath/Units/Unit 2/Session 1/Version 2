@@ -49,7 +49,7 @@ print(is_monotonic(nums3))
 nums4 = [1,9,8,3,5]
 print(is_monotonic(nums4))
 
-print("----------------------------------------------------------------------------------")
+print("---------------------------------------------------------")
 # Problem 2: Student Directory
     # Write a function student_directory() 
     # that takes a list of student_names as a parameter
@@ -88,7 +88,7 @@ print(student_dictionary(student_names))
 # Really look at what you want to do; what your parameters are
 # and what you want your keys or your values to be based on the information you have!
 
-print("----------------------------------------------------------------------------------")
+print("---------------------------------------------------------")
 # Problem 3: Dictionary Description
     # The following function get_description() 
     # takes in a dictionary info and a list keys as parameters. 
@@ -132,7 +132,7 @@ get_description(info, keys)
 # I need to properly identify every single parameter and undertand what it is
 # I need to logic through each and every part!! Not just assume things are correct because thy look correct
 
-print("----------------------------------------------------------------------------------")
+print("---------------------------------------------------------")
 # Problem 4: Sum Even Values 
     # Write a function sum_even_values() 
     # that returns the sum of all even values 
@@ -163,4 +163,80 @@ dictionary = {"a": 4, "b": 1, "c": 2, "d": 8, }
 print(sum_even_values(dictionary))
 # What did you learn? 
 # Remember what I really means depending on a list and depending on a dictionary 
-# 
+
+print("-----------------------------")
+# Example 1: Looping directly through a list 
+    # here i represents an element in the list
+nums = [10, 20, 30]
+
+for i in nums:
+    print(i)
+print("-----------------------------")
+# Example 2: Looping using range(len())
+    # here i is the index of the list 
+nums = [10, 20, 30]
+
+for i in range(len(nums)):
+    print(i)
+print("-----------------------------")
+# Example 3: looping throuhg a dictionary regularily
+    # Here i represents a key in thedictionary
+dictionary = {"a": 4, "b": 1, "c": 2}
+
+for i in dictionary:
+    print(i)
+print("-----------------------------")
+# Example 4: Combining them 
+    # here the i also represents a key but the result prints both the key and it's corresponding value
+dictionary = {"a": 4, "b": 1, "c": 2}
+
+for i in dictionary:
+    print(i, dictionary[i])
+
+print("---------------------------------------------------------")
+# Problem 5: Merge Catalogs 
+    # Write a function merge_catalogs() 
+    # that combines two product catalogs, 
+    # catalog1 and catalog2 as parameters. 
+    # Each parameter is a dictionary where 
+    # each key-value pair represents a product name and its price, respectively. 
+    # If the same product exists in both catalogs, 
+        # the price from the second catalog should overwrite the price in the first.
+    # Return the updated first catalog dictionary.
+'''
+U:
+2 catalogs are to be combined, if they have differing items we add them to one list 
+if they both have an item in common (a key in common in their dictionary...)
+then the contents in the second catalog are to dominate and replace overall (the value of the second catalog is to be used)
+
+P:
+define a function and its appropiate parameters as the 2 dictionaries
+create an empty dictionary where all the catalog items from both are to be stored
+loop: (check if an item from catalog 1 is in catalog 2)
+for item in catalog2 (for key in dictionary 2)
+    if the item is also in catalog1 (if key in dictionary 1)
+        call the emty dictionary and add the key and make it equal to the value from catalog 2
+    if item is not in catalog 1 
+        add it to the dictionary
+
+for item in catalog1
+    if the item is no in catalog 2 
+        add it to the dictionary 
+'''
+# I:
+def merge_catalogs(catalog1, catalog2):
+    merged_catalog = {}
+
+    for i in catalog2:
+        if i in catalog1 or i not in catalog1:
+            merged_catalog[i] = catalog2[i] # I don't know if this is the right notation but I will check later 
+    for i in catalog1:
+        if i not in catalog2:
+            merged_catalog[i] = catalog1[i]
+    return merged_catalog
+
+catalog1 = {"apple": 1.0, "banana": 0.5}
+catalog2 = {"banana": 0.75, "cherry": 1.25}
+print(merge_catalogs(catalog1, catalog2))
+# What did you learn?
+# Trustt!! A good UPI makes the difference.
