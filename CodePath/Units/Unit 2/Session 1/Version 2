@@ -128,4 +128,6 @@ def get_description(info, keys): # info is the dictionary and keys is the list
 info = {"name": "Tom", "age": "30", "occupation": "engineer"}
 keys = ["name", "occupation", "salary"]
 get_description(info, keys)
-# 
+# What did you learn?
+# I need to properly identify every single parameter and undertand what it is
+# I need to logic through each and every part!! Not just assume things are correct because thy look correct
