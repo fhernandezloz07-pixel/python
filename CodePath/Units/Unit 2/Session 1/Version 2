@@ -131,3 +131,36 @@ get_description(info, keys)
 # What did you learn?
 # I need to properly identify every single parameter and undertand what it is
 # I need to logic through each and every part!! Not just assume things are correct because thy look correct
+
+print("----------------------------------------------------------------------------------")
+# Problem 4: Sum Even Values 
+    # Write a function sum_even_values() 
+    # that returns the sum of all even values 
+    # in a given dictionary. 
+    # Assume the dictionary values are all integers.
+'''
+U:
+given a dictionary of keys whose values are numbers 
+return the addition of all the even values 
+
+P:
+define a function with adequate parameters
+define an empty variable to store all the additions 
+Loop:
+for a key in dictionary (do I also use range and length? I think so )
+if the values from each key in the dictionary are even 
+add them to the variable for addtions
+return the variable 
+'''
+# I: 
+def sum_even_values(dictionary):
+    sum_evens = 0
+    for i in dictionary:
+        if dictionary[i] %2 == 0:
+            sum_evens += dictionary[i]
+    return sum_evens
+dictionary = {"a": 4, "b": 1, "c": 2, "d": 8, }
+print(sum_even_values(dictionary))
+# What did you learn? 
+# Remember what I really means depending on a list and depending on a dictionary 
+# 
