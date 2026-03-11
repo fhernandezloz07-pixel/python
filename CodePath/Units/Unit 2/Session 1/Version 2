@@ -338,26 +338,25 @@ def most_popular_genre(movies):
     genre_totals = {}
     genre_counts = {}
     for movie in movies: # for an element in the list which is each individual dictionary
-        genre = movie["genre"] # make a variable 
-        rating = movie["rating"]
-
-        if genre not in genre_totals:
-            genre_totals[genre] = 0
+        genre = movie["genre"] # make a variable and assign it to the value of genre withinn the dictionaries (for easy readability)
+        rating = movie["rating"] # make a variable and assign it to the value of rating withing the dictionaries (for easy readablitity)
+        if genre not in genre_totals: # if we havent seen a particular genre before, create it and initialize it to 0.
+            genre_totals[genre] = 0 # the empty lists we made will take in the value of genre in the dictionary
             genre_counts[genre] = 0
 
-        genre_totals[genre] += rating
-        genre_counts[genre] += 1
-
+        genre_totals[genre] += rating # add the ratings together
+        genre_counts[genre] += 1 # this counts how many movies we have added to the addition, we will later use this to divide and get the average
+# then we initialize these variables or us to use since we are already done adding up all the genres together (now all we need is to average them out and find the biggest one)
     best_genre = None
     best_average = 0
 
-    for genre in genre_totals:
-        avg = genre_totals[genre] / genre_counts[genre]
+    for genre in genre_totals: # loop through the genres 
+        avg = genre_totals[genre] / genre_counts[genre] # average is the addition of all the ratings / the amount of movies we have added to the addition
 
-        if avg > best_average:
-            best_average = avg
-            best_genre = genre
-    return best_genre
+        if avg > best_average: # loop through all the averages to see if any are greater than the best average, this is an updating loop!
+            best_average = avg # make the best average the average we got at the end of the loop
+            best_genre = genre # and make the best genre the genre with the highest average at the end
+    return best_genre # return only the best genre which is all we need
 
   
 
