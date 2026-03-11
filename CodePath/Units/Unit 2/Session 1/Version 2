@@ -287,3 +287,79 @@ print(get_items_to_restock(products, restock_threshold))
 # How to store things from dictionaries inside lists
 # I have to remember to print all the way at the end!
 
+print("-----------------------------")
+# Problem 7: best Movie Genre
+    # Imagine you're contributing to a move recommendation engine, 
+    # and you're tasked with writing a function named most_popular_genre() 
+    # that returns the genre with the highest average rating across all movies.
+        # The function takes in a list of dictionaries named movies as a parameter. 
+        # Each dictionary represents data associated with a movie, 
+        # including its title, genre, and rating. 
+        # The function calculates the average rating for each genre 
+        # and returns the genre with the highest average rating.
+'''
+U:
+A list contains dictionaries as elements
+each element contains a title, genre, and rating of a movie
+we have to pair up each movie with other movies of the same genre and calculate their average rating
+then we have to compare it to the average rating of other genres
+and return the genre with the highest average rating 
+
+P:
+define a funtion with the parameter as the list 
+create 2 variables for i and j average ratings
+run a for loop: 
+for an element within the list (do we have to use range or len here? I think so because we will need to reference each index inside the loop)
+for an element of another list in the range i + 1 so we dont compare a thing to itself
+if (call the dictionary iside the list at position i)(then call the value of the dictionary from position i you are concerned about) 
+==
+(call the dictionary iside the list at position j)(then call the value of the dictionary from position j you are concerned about) 
+add the ratings together and divide by the number of ratings you collected
+do the same for other genres
+
+'''
+# Note: To do this we need to run a loop that checks if the value of the key "genre" for one element is the same as for another elements
+# How do we do that? We need to compare PAIRS OF DICITONARIES in the list
+# 1. loop through the list
+# 2. compare one dictionary with another dictionary
+# 3. Check the value of the key in both 
+
+data = [{"name": "Tom", "age": 20}, {"name": "Sara", "age": 22}, {"name": "Mike", "age": 20}]
+
+for i in range(len(data)): # for the index of an element in the data list
+    for j in range(i + 1, len(data)): # j = i + 1 because this avoids comparing the sme dictionary to itself, repeating comparison
+    # j represents the index of the element in the second dictionary we are comparing 
+        if data[i]["age"] == data[j]["age"]: # data[i] is the dictionary at position i, to access a value inside the dicionary we put the key of the value we want to access.
+            print("Match found") 
+            print(data[i]["name"], "and", data[j]["name"], "have the same age")
+print("-----------------------------")
+# now to finish problem 7 (update: you actually don't need a comparison like you practiced so don't reference it!):
+def most_popular_genre(movies):
+    genre_totals = {}
+    genre_counts = {}
+    for movie in movies: # for an element in the list which is each individual dictionary
+        genre = movie["genre"] # make a variable 
+        rating = movie["rating"]
+
+        if genre not in genre_totals:
+            genre_totals[genre] = 0
+            genre_counts[genre] = 0
+
+        genre_totals[genre] += rating
+        genre_counts[genre] += 1
+
+    best_genre = None
+    best_average = 0
+
+    for genre in genre_totals:
+        avg = genre_totals[genre] / genre_counts[genre]
+
+        if avg > best_average:
+            best_average = avg
+            best_genre = genre
+    return best_genre
+
+  
+
+print("---------------------------------------------------------")
+# Problem 8: 
