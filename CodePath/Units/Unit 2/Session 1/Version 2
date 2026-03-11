@@ -431,4 +431,6 @@ product_scores = {"x0123": 75, "x0124": 40, "x0125": 90, "x0126": 55}
 threshold = 60
 print(quality_control(product_scores, threshold))
 # What did you learn? 
-# believe in youself, write down more steps than necessary if it truely helps
+# believe in youself, write down more steps than necessary if it truely helps you. 
+# What matters is that you actually inderstand the question before you make any coding moves 
+# if your preparation plan feels funky, you don't understand the question, a coding concept, or you are still confused on something
