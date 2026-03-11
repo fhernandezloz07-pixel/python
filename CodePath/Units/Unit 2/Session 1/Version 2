@@ -358,7 +358,77 @@ def most_popular_genre(movies):
             best_genre = genre # and make the best genre the genre with the highest average at the end
     return best_genre # return only the best genre which is all we need
 
-  
+movies = [
+    {"title": "Inception",
+     "genre": "Science Fiction",
+     "rating": 8.8
+    },
+    {"title": "The Matrix", 
+     "genre": "Science Fiction",
+     "rating": 8.7
+    },
+    {"title": "Pride and Prejudice", 
+     "genre": "Romance",
+     "rating": 7.8
+    },
+    {"title": "Sense and Sensibility", 
+     "genre": "Romance",
+     "rating": 7.7
+    }
+]
+
+print(most_popular_genre(movies))
+# What did you learn? 
+# I can create varibales inside the loop that will help me for readability and reduced repetition
+# I learned that I need to practice this question a lot bc i'm still stick on it
 
 print("---------------------------------------------------------")
-# Problem 8: 
+# Problem 8: Quality Control
+    # Write a function quality_control() 
+    # that takes in a dictionary product_scores 
+    # and an integer threshold as parameters. 
+    # The dictionary product_scores has key-value pairs 
+    # that represent a product ID and its quality rating.
+        # If the product has a score greater than or equal to threshold, 
+            # the function categorizes it as a "pass".
+        # If the product has a score less than threshold, 
+            # the function categorizes it as a "fail".
+    # The function returns a new dictionary where the key-value pair 
+    # is the product ID and whether it is a "pass" or "fail".
+'''
+U:
+A dictionary Called product_scores has keys as a product ID and value as the products quality rating 
+We need to check if the product has a score greater than or less than a given threshold
+If product score greater than or equal to threshold its a pass
+If product score less than threshod its a fail 
+
+P:
+1. Define a function with appropiate parameters: the o.g dictionary product_scores and the threshold 
+2. create an empty dictionary where we will store the new key-value (ID: pass or fail classification) pairs
+3. Loop through all of the key-element pairs in the original dictionary
+3.1 for i in product_scores: (key in product scores) (do I need a range or len(product_scores)) ?!?!
+3.2 if product_scores[i] >= threshold: (if the value of the key i is greater than or equal to threshold)
+3.3 call the empty dictionary and the key and make it euqal to the the string pass 
+3.4 generate a similar loop for the less than option but this time make it equal to fail 
+3.5 Return the new dictionary where we store the new values
+3.6 copy-paste the example input 
+3.7 Run
+3.8 check if errors
+3.9 ask for help
+4.0 write down what you learned
+'''
+# I: 
+def quality_control(product_scores, threshold):
+    rating_dictionary = {}
+    for i in product_scores:
+        if product_scores[i] >= threshold:
+            rating_dictionary[i] = 'pass'
+        if product_scores[i] < threshold:
+            rating_dictionary[i] = 'fail'
+    return rating_dictionary
+
+product_scores = {"x0123": 75, "x0124": 40, "x0125": 90, "x0126": 55}
+threshold = 60
+print(quality_control(product_scores, threshold))
+# What did you learn? 
+# believe in youself, write down more steps than necessary if it truely helps
