@@ -289,7 +289,7 @@ at the end divide by the number of keys in the dictionary, you could possibly us
 '''
 # I: 
 def calculate_gpa(report_card):
-    calculated_gpa = 0 # this can be initialoized to 0 because by the time we divide this variable will no longer be 0
+    calculated_gpa = 0 # this can be initialized to 0 because by the time we divide this variable will no longer be 0
     for i in report_card: # for a given key in the dictionary report_card
         if report_card[i] == "A": # if the key of the dictionary equals A...
             calculated_gpa += 4
@@ -319,7 +319,7 @@ print("-------------------------------------------------------------")
         # including its title, author, and rating. 
     # The function should return the dictionary for the book with the highest rating.
 '''
-U: we have to retunr the dictionary of the book with the highest rating
+U: we have to return the dictionary of the book with the highest rating
 meaning we should return the title, the author, and the rating 
 
 P: 
@@ -379,5 +379,6 @@ def index_to_value_map(lst):
     for i in range(len(lst)):
         result[i] = lst[i]
     return result
+
 lst = ["apple", "banana", "cherry"]
 print(index_to_value_map(lst))

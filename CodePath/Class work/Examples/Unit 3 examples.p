@@ -33,3 +33,34 @@ print(sample5[0:])
 print(sample5[0:10:2]) # step size, every other character is take out
 print(sample5[0:10:-1]) # return the first 10 letters but reversed, the second index is not inclusive
 print(sample5[10::-1]) # How is this different, something is included
+
+# pangram -> a sentence that cntains every letter of the english alphabet at least once, regardless of case. 
+
+'''
+U:
+Write a function to determin if the following is a pangram, could be any casing, needs to return a boolean value of true or false
+
+P:
+1. We are going to be working with an unknown size string string
+    we will clean up the string to know our expected format
+2. want to check for all 26 letter using a dictionary
+2.5 We need to use a for loop to iterate through each char
+     -> key: letter, value: true or false
+3. count number of keys or items in our dictionary, if == 26 (return value)
+'''
+# I:
+def is_pangram(sentence): 
+    lowercase_sentence = sentence.lower()
+    letter_appearances = {}
+
+    for char in lowercase_sentence:
+        if char.isalpha() == False: # This will allow us
+            continue
+        if char not in letter_appearances:
+            letter_appearances[char] = True
+
+    if (len(letter_appearances)) == 26:
+        return True
+    else:
+        return False
+# lets test our function
