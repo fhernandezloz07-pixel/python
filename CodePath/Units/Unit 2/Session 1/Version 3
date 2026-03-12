@@ -85,3 +85,7 @@ def create_dictionary(keys, values):
     return dictionary
 keys = ['peanut', 'dragon', 'star', 'pop', 'space']
 values = ['butter', 'fly', 'fish', 'corn', 'ship']
+print(create_dictionary(keys, values))
+# What did you learn? 
+# You can comment out checking the code before you run it to make sure 
+# what you wrote makes sence and will give you the result you want 
