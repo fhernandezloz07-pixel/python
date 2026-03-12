@@ -60,4 +60,28 @@ print("---------------------------------------------------------")
         # keys[i] should be paired with values[i] 
         # in the dictionary where 0 <= i <= len(keys). 
         # You may assume keys and values are the same length.
+'''
+U:
+We have to write a dictionary that pairs up keys and parameters depending on their indexes
+Assume the keys and values list are the same length
 
+P:
+1. define a fucntion with the appropiate parameters
+2. initialize an emty dictionary where we will store all of the keys and values put together
+3. write a for loop:
+3.1 for i in keys (for an element in the keys list) -> use range and len because we want the index!
+4. make the element k equal to the dictionary key in the emty dictionary 
+5. call the dictionary with the key list at an indez and make it euqal to the value list at that same index 
+'''
+# I: 
+def create_dictionary(keys, values):
+    dictionary = {}
+    for i in range(len(keys)): # for the index that the element i is in ... 
+        dictionary[keys[i]] = values[i]
+        # dictionary[keys[i]] = values[i]
+        # dictionary[keys[0]] = values[0]
+        # dictionary[peanut] = butter
+        # dictionary = {"peanut": butter} YESSSSSSS! This is what we want
+    return dictionary
+keys = ['peanut', 'dragon', 'star', 'pop', 'space']
+values = ['butter', 'fly', 'fish', 'corn', 'ship']
