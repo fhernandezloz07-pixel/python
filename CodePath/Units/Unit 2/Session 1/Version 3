@@ -130,3 +130,42 @@ print_pair(dictionary, "spongebob")
 # What did you learn?
 # My upi was wrong we dont need a for we just need to ckeck if the target is in the dictionary and if it's not 
 # that simple, and since the target is the key we can do dictionary[target] to get the appropiate value
+
+print("---------------------------------------------------------")
+# Problem 2: Build Inventory
+    # Write a function build_inventory() 
+    # that takes in a list of product_names
+    # and a corresponding list of product_prices as parameters.
+    # The function returns a dictionary representing the inventory of a small store. 
+    # Each product name in product_names should be a key in the dictionary 
+    # and the corresponding value should be the item price.
+        # product_names[i] should be paired with product_prices[i] 
+        # in the dictionary where 0 <= i <= len(product_names). 
+        # You may assume that product_names and product_prices are the same length.
+'''
+U:
+There are 2 lists, one with the names of the products and another with their prices
+I have to pair each name with the corresponding price 
+assuming we are going in order of the indexes of both lists!
+
+P:
+1. define a fucntion with appropiate parameters
+2. initialize an empty dicitonary where we will store the keys and values needed
+3. i in range(len(product_names)) -> for every index of the list of names
+4. call the dictionary and the keys and make it equal to values 
+
+Note: Same thing we already did, you cant use range len in the for loop 
+for a dictionary but you can use other things!
+'''
+def build_inventory(product_names, product_prices):
+    inventory_dictionary = {}
+    for i in range(len(product_names)):
+        inventory_dictionary[product_names[i]] = product_prices[i] 
+# This is very important, if i dont include product_names iside the calling 
+# then it will print out the number of the indez not the actual name!
+    return inventory_dictionary
+product_names = ["Apple", "Banana", "Orange"]
+product_prices = [0.99, 0.50, 0.75]
+print(build_inventory(product_names, product_prices))
+# What did I learn? 
+    # calling the dictionary with key and making it equal to values is one of the most important steps!
