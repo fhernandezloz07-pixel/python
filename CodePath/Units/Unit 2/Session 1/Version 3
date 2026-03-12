@@ -26,7 +26,8 @@ print(find_peak(lst))
         # 9 > 5 yes!
         # 9 > 7 Yes! PEAK FOUND! -> Return peak: 3
 
-    
+print("----------------------------")
+   
 '''
 U:
 MOUNTAIN LIST DEFINITION: A mountain list strictly increases, reaches a peak, and then strictly decreases
@@ -44,11 +45,19 @@ def peak_index_in_mountain_list(lst):
     for i in range(1, len(lst)- 1): # i in this case is not the element but an indesx!
         # here we are calling the number that is located at index i
         if lst[i] > lst[i-1] and lst[i] > lst[i+1]:
-            print()
-
-
-
-
+            return i
+mountain_lst = [0,3,8,0]
+peak = peak_index_in_mountain_list(mountain_lst)
+print(peak)
 
 print("---------------------------------------------------------")
-# Problem 2:
+# Problem 2: Create a dictionary
+    # Write a function create_dictionary() 
+    # that takes in a list of keys and a list of values as parameters. 
+    # The function returns a dictionary 
+    # where each item in keys is paired with 
+    # a corresponding item in values.
+        # keys[i] should be paired with values[i] 
+        # in the dictionary where 0 <= i <= len(keys). 
+        # You may assume keys and values are the same length.
+
