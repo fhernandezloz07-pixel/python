@@ -169,3 +169,6 @@ product_prices = [0.99, 0.50, 0.75]
 print(build_inventory(product_names, product_prices))
 # What did I learn? 
     # calling the dictionary with key and making it equal to values is one of the most important steps!
+
+print("---------------------------------------------------------")
+# Problem 3: Build Inventory
