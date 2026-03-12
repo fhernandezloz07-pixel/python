@@ -69,7 +69,7 @@ P:
 1. define a fucntion with the appropiate parameters
 2. initialize an emty dictionary where we will store all of the keys and values put together
 3. write a for loop:
-3.1 for i in keys (for an element in the keys list) -> use range and len because we want the index!
+3.1 for i in keys (for aCn element in the keys list) -> use range and len because we want the index!
 4. make the element k equal to the dictionary key in the emty dictionary 
 5. call the dictionary with the key list at an indez and make it euqal to the value list at that same index 
 '''
@@ -89,3 +89,44 @@ print(create_dictionary(keys, values))
 # What did you learn? 
 # You can comment out checking the code before you run it to make sure 
 # what you wrote makes sence and will give you the result you want 
+
+print("---------------------------------------------------------")
+# Problem 3: Print Pair
+    # Write a function print_pair() 
+    # that takes in a dictionary dictionary 
+    # and a key target as parameters. 
+    # The function looks for the target and when found, 
+    # it prints the key and it's associated value as "Key: <key>" 
+    # followed by "Value: <value>". 
+    # If target is not in dictionary, 
+        # print "That pair does not exist!".
+'''
+U:
+Given a dictionary and a set target, we need to find the target in the dict.
+if not in there print "pair does not exist"
+if it does exist run a loop to find where it is and if found print both 
+they key and the value it is associated with
+
+P:
+1. define a fuction and appropiate parameters
+2. for i in dictionary (Checking each key in the dictionary):
+3. if i == threstargetold:
+4. print("Key: " + i)
+5. print("Key: " + dictionary[i])
+6. else: print(That pair does not exist!)
+'''
+# I: 
+def print_pair(dictionary, target):
+    
+    if target in dictionary:
+        print("Key: " + target)
+        print("Key: " + dictionary[target])
+    else:
+        print("That pair does not exist!")
+dictionary = {"spongebob": "squarepants", "patrick": "star", "squidward": "tentacles"}
+print_pair(dictionary, "patrick")
+print_pair(dictionary, "plankton")
+print_pair(dictionary, "spongebob")
+# What did you learn?
+# My upi was wrong we dont need a for we just need to ckeck if the target is in the dictionary and if it's not 
+# that simple, and since the target is the key we can do dictionary[target] to get the appropiate value
