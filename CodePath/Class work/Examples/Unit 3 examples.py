@@ -82,5 +82,34 @@ print("Welcome back, {}! You have signed in at {}, enjoy your visit!".format(use
 
 
 # Instructor Demo
-# 1. Understand
-def reverse_wordds():
+# 1. Given a string s containing words separated by spaces, 
+# reverse the order of the words. 
+# Remove extra spacess and ensure that words are separated 
+# by a single space in the output. Let's inverstigate VS Code debugging features!
+    # input: 
+    #   s = "   the sky is  blue   "
+    # output: "blue is sky the"
+'''
+U:
+input and output are both strings 
+
+P:
+1. Break up the words into individual components
+2. Reverse then somehow (mayble using built in functions)
+3. glue the words back together in reverse order, adding spacing back in
+4. Return the final string
+
+'''
+def reverse_words(s): 
+    word_list = s.split() # split by default splits every space.
+  
+    word_list.reverse() # -> interviewer might prevent this so try to think of using other ones, maybe slicing
+    
+    print(" ".join(word_list))
+    print(word_list)
+
+    # Return word_list
+
+sample_input = s = "  the sky is  blue "
+print(reverse_words(sample_input))
+# output: "blue is sky the"

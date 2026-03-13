@@ -171,4 +171,38 @@ print(build_inventory(product_names, product_prices))
     # calling the dictionary with key and making it equal to values is one of the most important steps!
 
 print("---------------------------------------------------------")
-# Problem 3: Build Inventory
+# Problem 3: Update or warn
+    # Write a function update_or_warn() that 
+    # takes in a dictionary records, a key item, and a new value update_value as parameters. 
+    # The function updates the value of item in records with update_value if item exists. 
+    # If item does not exist, it should print "<item> not found!" and not modify the dictionary.
+'''
+U:
+given a dictionary we have to print the original dictionary and find the intem we are calling
+if item is found then we print out the dictionary with th eupdated value
+if the item was not found then we print that the item was not found
+
+P:
+1. define a function with the dictionary, the key, and the update value as paramenters
+2. I don't think we need to define an empty list, just change the original one 
+3. for key in dictionary (update: we actually don't need this!)
+4.  if key not in dictionary
+5.  print key not found!
+6. if key in dictionary
+7. call the dictionary with the key and make it equal to update value
+'''
+# I:
+def update_or_warn(records, item, update_value):
+    if item in records:
+        records[item] = update_value
+    else: 
+        print( item + "not found!")
+
+records = {"apple": 1, "banana": 2, "orange": 3}
+update_or_warn(records, "grape", 4)
+# Print the input dictionary after running the function to check if it was modified
+print(records) 
+update_or_warn(records, "banana", 5)
+print(records)
+# 
+
