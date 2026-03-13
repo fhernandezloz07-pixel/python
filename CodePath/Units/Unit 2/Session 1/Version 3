@@ -226,7 +226,7 @@ P:
 2.1 counter = 0
 3. for key in dictionary
 4. key_amount += 1
-4. if key value == "Present"
+4. if key alue == "Present"
 5. counter += 1 (checks how many times present was frequented in each key)
 6.1 fraction = counter / key amount 
 6. at the end attendance_percentage = fraction * 100
@@ -234,5 +234,23 @@ P:
 '''
 # I: 
 def attendance_rate(attendance_list):
-    counter = 0 # checks how many keys there are
-    
+    key_count = 0 # checks how many keys there are
+    present_count = 0 # checks how many presents' there are 
+    for item in attendance_list:
+        key_count += 1
+        if attendance_list[item] == "Present":
+            present_count += 1
+    fraction = present_count / key_count
+    attendance_percentage = fraction * 100
+    return attendance_percentage
+
+attendance_list = {
+    "Bluey": "Present", 
+    "Bingo": "Absent", 
+    "Snickers": "Present", 
+    "Winton": "Absent"
+}
+print(attendance_rate(attendance_list))
+
+
+        
