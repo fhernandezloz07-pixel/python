@@ -308,3 +308,40 @@ print(average_book_ratings(book_ratings))
 # Remember to think about what range and len does in a list and what a key does to a dictionary
 # Think about proper calling, grammar, syntax etc!
 
+print("---------------------------------------------------------")
+# Problem 6: Odd keys Even Values
+    # Write a function odd_keys_even_values() that 
+    # takes in dictionary as a parameter, 
+    # a dictionary with integer keys and values. 
+    # The function returns a list of keys that are odd 
+    # where their corresponding values are even.
+'''
+U:
+Based on a dictionary where the keys and values are both integers
+return a list where the keys in the dictionary are odd and they have even values 
+P:
+1. define a funtion with the appropiate parameter as dictionary
+2. create an empty list where we will store the keys with the apporpiate qualifications
+3. for key in dictionary
+4. if key %2 > 0 or < 0 
+5. if value of the key %2 == 0
+6. call the empty list and add the key to it 
+7. return the list and run 
+'''
+# I:
+def odd_keys_even_values(dictionary):
+    list = []
+    for i in dictionary:
+        if i %2 > 0 or i %2 < 0: # if key -> odd
+            if dictionary[i] %2 == 0: # if value of odd key -> even
+                list.append(i)
+    return list
+dictionary = {1: 2, 2: 6, 3: 5, 4: 4, 5: 8}
+final_list = odd_keys_even_values(dictionary)
+print(final_list)
+# Test Run 1: I anticipate some mistakes but lets see...
+# I got it!
+# 
+
+
+
