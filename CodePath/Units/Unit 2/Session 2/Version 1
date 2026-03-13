@@ -112,3 +112,28 @@ print(count_occurences(nums))
 
 print("--------------------------------------------------------------------")
 # Problem 4: highest Priority Task
+    # Given a dictionary tasks where keys are task names 
+    # and values are priorities (1-10, where 10 is the highest priority),
+    # write a function get_highest_priority_task() that 
+    # removes the task with the highest priority from the dictionary and returns its name.
+        # If two tasks have the same priority, return the task that comes first in the alphabet.
+'''
+U:
+Given a dictionary with a task and its priority 
+return the task name with the highest priority 
+while aslo remiving it from the list
+
+P:
+define a function with the appropiate dictionary parameter tasks
+write a for loop:
+for i in tasks (for every key in the dictionary):
+initialize a variable highest priority task and set it equal to to i
+if the value of the current key i is greater than the value of the highest priority task value 
+highest priority variable  = value of the current key i
+return hgihest priority variable
+'''
+# I:
+def get_highest_priority_task(tasks):
+    for i in tasks:
+        highest_priority_task = i
+        if tasks[i] > highest_priority_task

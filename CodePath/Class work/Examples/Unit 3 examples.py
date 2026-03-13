@@ -64,3 +64,20 @@ def is_pangram(sentence):
     else:
         return False
 # lets test our function
+
+# String Formatting allows you to create a tring "template" that dynamically fill in placeholders in the string.
+# Lets compare string concatenation vs. two approaches of string formatting
+userName = "Cory2026"
+currentTime = "March 12th, 8:10pm"
+# Old way, string concatenation (using + )
+# print(userName + "has signed in at " + currentTime)
+
+# f"" optioon 1
+print(f"{userName} {currentTime}")
+
+
+
+
+# Instructor Demo
+# 1. Understand
+def reverse_wordds():
