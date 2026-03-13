@@ -345,5 +345,88 @@ print(final_list)
 # trust yourself! There Can be if statements inside if statements, just make sure what you are tracking is correct
 
 print("---------------------------------------------------------")
-# Problem 6:
+# Problem 7: Best Team 
+    # You're developing an analytics tool for a sports league. 
+    # Your task is to write a function named team_with_best_average_score() 
+    # that returns the team with the highest average score over a season.
+        # The function should accept a list of dictionaries named games as a parameter. 
+        # Each dictionary represents data from a game, 
+        # including the "team_name", 
+        # and the "score" they achieved in that game. 
+        # The function calculates the average score for each team across all games 
+        # and returns the team with the highest average score.
+'''
+U:
+For a list containing dictionaries, each with a team name and a team score for a game
+Return the team that socred the best on average for all of its plays 
+by averaging out all the team games
+P:
+1. define a function with the appropiate list parameter
+2. initialize dictionaries team_totals, and team_counts
+3. loop through the games -> for game in games
+4. extract the values -> team = game["team_name"], and score = game["score"]
+5. update the totals (if a team appears for the first time) -> team_totals[team] = 0 and team_counts[team] = 0
+6. Find the best average after collecting totals (loop through the teams and compare averages!)
+
+Note: I was lost so chat helped me with the steps on this one :<
+'''
+# I: 
+def team_with_best_average_score(games):
+    team_totals = {} # empty dictionaries initialized 
+    team_counts = {}
+
+    for game in games: # for a dictionary in the list ... 
+        team = game["team_name"] # the variable team is equal to the key of each dictionary called "team_name"
+        score = game["score"] # the variable score is eqyal to the key of the dictionary called "score"
+        
+        if team not in team_totals: # if it is our first time seeing the team name in our team_totals dictionary ...
+            team_totals[team] = 0 # call our dictionary for totals and the key team and make its value equal to 0
+            team_counts[team] = 0 # call our dictionary for counting and the key team and make its value equal to 0
+
+        team_totals[team] += score # for game in games, we are assuming we do have the team name in our dictionary so we just add the new score
+        team_counts[team] += 1 # if we do have the team name we add team counts by 1 because we are adding the amount of games to later use it in the division
+
+
+    best_team = None # initialize this variable to none 
+    best_average = 0 # we also initialize this to 0 
+
+    for team in team_totals: # for each key team in the dictionary team totals  
+
+        avg = team_totals[team] / team_counts[team] # we take the average to be the value of each team score over the amount we added 
+
+        if avg > best_average: # check through each 
+            best_average = avg
+            best_team = team
+
+    return best_team
+
+games = [
+    {"team_name": "Lions",
+     "score": 23
+    },
+    {"team_name": "Tigers", 
+     "score": 30
+    },
+    {"team_name": "Lions", 
+     "score": 27
+    },
+    {"team_name": "Bears", 
+     "score": 20
+    },
+    {"team_name": "Tigers", 
+     "score": 24
+    },
+    {"team_name": "Bears", 
+     "score": 22
+    }
+]
+print(team_with_best_average_score(games))
+# What did you leanr? 
+# That I can't do this :(
+
+
+
+    
+
+
 
