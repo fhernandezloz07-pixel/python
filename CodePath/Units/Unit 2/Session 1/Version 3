@@ -204,5 +204,7 @@ update_or_warn(records, "grape", 4)
 print(records) 
 update_or_warn(records, "banana", 5)
 print(records)
-# 
+# What did you learn?
+# If I have to update values I can do that without creating a new empty list
+# I don't always need a for loop
 
