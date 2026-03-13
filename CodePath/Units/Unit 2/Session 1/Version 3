@@ -341,7 +341,9 @@ final_list = odd_keys_even_values(dictionary)
 print(final_list)
 # Test Run 1: I anticipate some mistakes but lets see...
 # I got it!
-# 
+# What did you learn? 
+# trust yourself! There Can be if statements inside if statements, just make sure what you are tracking is correct
 
-
+print("---------------------------------------------------------")
+# Problem 6:
 
