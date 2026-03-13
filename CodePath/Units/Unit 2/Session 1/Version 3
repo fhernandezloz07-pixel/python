@@ -208,3 +208,31 @@ print(records)
 # If I have to update values I can do that without creating a new empty list
 # I don't always need a for loop
 
+print("---------------------------------------------------------")
+# Problem 4: Attendance Rate
+    # Write a function attendance_rate() that 
+    # takes in a dictionary attendance_list as a parameter. 
+    # The function maps student names to their 
+    # attendance status ("Present" or "Absent"), 
+    # and returns the percentage of students who are present.
+'''
+U:
+based on a dictinary of students and their attendance, 
+take the percentage of the students who are present 
+
+P:
+1. Define a function with appropiate parameter as a dictionary
+2. run a loop that checks the entire list for who was present
+2.1 counter = 0
+3. for key in dictionary
+4. key_amount += 1
+4. if key value == "Present"
+5. counter += 1 (checks how many times present was frequented in each key)
+6.1 fraction = counter / key amount 
+6. at the end attendance_percentage = fraction * 100
+7. return attendance_percentage
+'''
+# I: 
+def attendance_rate(attendance_list):
+    counter = 0 # checks how many keys there are
+    
