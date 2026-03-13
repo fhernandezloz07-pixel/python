@@ -255,4 +255,53 @@ print(attendance_rate(attendance_list))
 # dont ask for help right away, you can do this! 
 # for the key count and otherintitialize all thingies inside fucntion but outside for loop
 
-        
+print("---------------------------------------------------------")
+# Problem 5: Average Book Rating
+    # Write a function average_book_ratings(), 
+    # that calculates the average rating for each book in a collection. 
+    # The function takes one parameter: 
+    # a dictionary book_ratings where each key-value pair represents 
+    # a book title and a list of its ratings, respectively. 
+    # Ratings are represented as floating-point numbers. 
+    # The function should return a new dictionary with 
+    # book titles as keys and their average rating.
+'''
+U:
+Based on the original dictionary create a new dictionary that diplays the key book 
+as well as the average rating for the list. 
+I'm thinking I can use len(lst) for the values for the division
+
+P:
+1. define a function with the dictionary parameter
+2. initialize an empty dictionary where we will store the book names as well as their averages 
+3. for key in dictionary 
+4. create an addition element and set it equal to 0
+5. for element which is in the value of the dictionary (I think I might need to use a range len(value)) here
+6. call the additin value and make it equal to the addition of all elements
+7. finally divide the addition by the length of the list
+8. return it!
+'''
+#I:
+def average_book_ratings(book_ratings):
+    new_dictionary = {}
+    for i in book_ratings:
+        list_addition = 0
+        for j in book_ratings[i]:
+            list_addition += j
+        average_rating = list_addition / len(book_ratings[i])
+        new_dictionary[i]= average_rating
+    return new_dictionary
+
+book_ratings = {
+    "The Great Gatsby": [4.5, 3.0, 5.0],
+    "To Kill a Mockingbird": [4.8, 5.0, 4.0, 4.9]
+}
+print(average_book_ratings(book_ratings)) 
+# I anticipate printing errors here but lets see:
+    # i got the right average for the second book but I couldn't print for the first book 
+    # i also forgot to use the list!
+# Second try: 
+    # Yay I got it to work, I just needed to think about 
+    # the way I was appending to my new dictionary
+# What did you leanr?
+
