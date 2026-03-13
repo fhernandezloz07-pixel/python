@@ -251,6 +251,8 @@ attendance_list = {
     "Winton": "Absent"
 }
 print(attendance_rate(attendance_list))
-
+# What did you leanrn?
+# dont ask for help right away, you can do this! 
+# for the key count and otherintitialize all thingies inside fucntion but outside for loop
 
         
