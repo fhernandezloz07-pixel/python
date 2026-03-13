@@ -64,7 +64,10 @@ def is_pangram(sentence):
     else:
         return False
 # lets test our function
+print("-----------------------------------------------------")
 
+
+# Session 2 Example: String Formatting 
 # String Formatting allows you to create a tring "template" that dynamically fill in placeholders in the string.
 # Lets compare string concatenation vs. two approaches of string formatting
 userName = "Cory2026"
@@ -72,9 +75,9 @@ currentTime = "March 12th, 8:10pm"
 # Old way, string concatenation (using + )
 # print(userName + "has signed in at " + currentTime)
 
-# f"" optioon 1
-print(f"{userName} {currentTime}")
-
+# f"" option 1
+print(f"Welcome back, {userName} You have signed in at {currentTime}")
+print("Welcome back, {}! You have signed in at {}, enjoy your visit!".format(userName, currentTime)) # Both methods are pretty common
 
 
 
