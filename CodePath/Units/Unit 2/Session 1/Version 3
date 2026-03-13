@@ -304,4 +304,7 @@ print(average_book_ratings(book_ratings))
     # Yay I got it to work, I just needed to think about 
     # the way I was appending to my new dictionary
 # What did you leanr?
+# Remember the way you append to a dictionary
+# Remember to think about what range and len does in a list and what a key does to a dictionary
+# Think about proper calling, grammar, syntax etc!
 
