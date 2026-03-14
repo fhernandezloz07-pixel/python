@@ -121,10 +121,10 @@ print("--------------------------------------------------------------------")
 U:
 Given a dictionary with a task and its priority 
 return the task name with the highest priority 
-while aslo remiving it from the list
+while also remiving it from the list
 
 P:
-define a function with the appropiate dictionary parameter tasks
+define a function with the appropiate dictionary parameter as tasks 
 write a for loop:
 for i in tasks (for every key in the dictionary):
 initialize a variable highest priority task and set it equal to to i
@@ -134,6 +134,31 @@ return hgihest priority variable
 '''
 # I:
 def get_highest_priority_task(tasks):
-    for i in tasks:
-        highest_priority_task = i
-        if tasks[i] > highest_priority_task
+    highest_task = None # initialize highest priority task to none for now (key)
+    highest_priority = 0 # initialize highest priority representing the value of the highest priority key task to 0
+
+    for task in tasks: # for a key in the dictionary tasks
+        if tasks[task] > highest_priority: # if the value of that key is greater than the highest_priority task we just initialized ... 
+            highest_priority = tasks[task] # set the hgihest priority number is set to the value of the task we are checking 
+            highest_task = task # and we also se the highest priority task equal to the one we are checking that passes the conditions 
+        
+        elif tasks[task] == highest_priority and task < highest_task: # python conpares strings alpahbetically
+            # if the value of the key we are ckecking is not greater than the vaue of the current highest priority value
+            # and instead the value is equal to it and the key is also less than the current highest task key
+            highest_task = task # we set the highest task equal to the current task
+    
+    tasks.pop(highest_task) # the pop removes it from the dictionary as we are told to do, it will now not show up if we print the dictionary
+    return highest_task
+
+tasks = {"task1": 8, "task2": 10, "task3": 9, "task4": 10, "task5": 7}
+perform_task = (get_highest_priority_task(tasks))
+print(perform_task)
+
+perform_task = (get_highest_priority_task(tasks))
+print(perform_task)
+
+perform_task = (get_highest_priority_task(tasks))
+print(perform_task)
+print(tasks)
+# What did you learn? 
+# The pop feature allows for us to remove a key and its value from a dictionary entirely!
