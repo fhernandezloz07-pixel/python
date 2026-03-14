@@ -424,6 +424,42 @@ print(team_with_best_average_score(games))
 # What did you leanr? 
 # That I can't do this :(
 
+print("---------------------------------------------------------")
+# Problem 8: First Unique Items
+    # Write a function find_unique_items() that 
+    # takes two lists list_a and list_b as parameters. 
+    # The function identifies unique items from the lists 
+    # and returns a dictionary with the items as keys 
+    # and a boolean value as the value indicating whether 
+    # the item is unique to the first list (True) or not (False).
+'''
+U:
+Given 2 lists with different items, print out a dictionary
+whose keys are the items that were unique in both lists
+if an item was unique in list a then the value of the key is true
+if an item was unique in list b then the value of the key is false
+P:
+1. define a function and its apropiate paramenters as the two lists
+2. Create an empty dictionary where all the keys and values will be stored
+3. loop through list a
+4. if the item is not in list b then add it to the dictionary with value true 
+5. loop through list b 
+6. if the item is not in list a then add it with the value false 
+7. return the dicitonary and print 
+'''
+# I: 
+def find_unique_items(list_a, list_b):
+    dictionary = {}
+    for a in list_a: # for an element in list a
+        if a not in list_b:
+            dictionary[a] = "True" # call the dictionary with the key you want and make it equal to the value you want
+    for b in list_b: # for an element in list b
+        if b not in list_a:
+            dictionary[b] = "False"
+    return dictionary
+list_a = ["apple", "banana", "carrot"]
+list_b = ["apple", "banana", "date"]
+print(find_unique_items(list_a, list_b))
 
 
     
