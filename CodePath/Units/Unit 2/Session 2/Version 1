@@ -162,3 +162,62 @@ print(perform_task)
 print(tasks)
 # What did you learn? 
 # The pop feature allows for us to remove a key and its value from a dictionary entirely!
+
+print("--------------------------------------------------------------------")
+# Problem 5: Find Majority Element 
+    # Write a function find_majority_element() that 
+    # takes in a list of integers elements 
+    # and finds the majority element in the list. 
+    # A majority element is an element that appears 
+    # more than n/2 times where n is the size of the list. 
+    # If there is no majority element, return None.
+'''
+U:
+Given a list, return the majority number element in the list. 
+A majority number element in the list is one that satisfies the property;
+    the element appears more than n/2 times where n is the size of the list
+this basically means that the number element makes up more than half of the list
+P:
+define a function with the appropiate parameter as the list of integers; elements
+initialize an empty dictionary where I will store the keys as a number in the list and the value as the amount of times the muber appeared in the list
+initialize a counter_n and set it equal to 0 i inside the for loop, each time the for loop runs this will add 1, by the end we should know the amoun of numbers there were in the list! (we can use this to divide later so we can actually set it to n)
+for element in elements 
+set the counter_n to += 1
+if element not in dictionary
+call the dictionary and the key as the element and make it equal to 1 
+if element in dictionary 
+call the dictionary and the key as the element and make it += 1 (adding one each time!)
+In the end we ideally already have our full dictionary with the appropiate keys and values so ...
+for every key in dictionary
+if the value of the key is greater than the length of the list elements all over 2 
+make variable majority_element equal to that key (do I have to initialize majority_element = None?)
+return majority_element
+'''
+# I: 
+def find_majority_element(elements):
+    dictionary = {}
+    counter_n = 0
+
+    for element in elements:
+        counter_n += 1
+
+        if element not in dictionary:
+            dictionary[element] = 1
+
+        else: # none of that fancy stuff needed just an else and your code!
+            dictionary[element] += 1
+    
+    majority_element = None # I was supposed to initialize this outside the for loop i am using it in
+
+    for i in dictionary: 
+        if dictionary[i] > counter_n / 2: # length of the list elements all over 2 
+            majority_element = i
+
+    return majority_element # you technically dont even need this variable you can simply return i but ok ... 
+elements = [2, 2, 1, 1, 1, 2, 2]
+print(find_majority_element(elements))
+# Test run 1: I anticipate some errors with the returns and the way I used my counter but lets see... 
+    # Output: {2: 2}, Expected output: 2
+    # fixes made it work, you were right I returned too early and i only needed an else statement to make it true
+    # also remember to initialize a valriable before you use it if its inse a loop if statement
+
