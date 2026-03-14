@@ -460,7 +460,9 @@ def find_unique_items(list_a, list_b):
 list_a = ["apple", "banana", "carrot"]
 list_b = ["apple", "banana", "date"]
 print(find_unique_items(list_a, list_b))
-
+# What did you learn? 
+# I don't have to break something down a lot and make things complicates, 
+# I can simply make a good plan in my upi that adresses all points 
 
     
 
