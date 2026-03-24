@@ -54,7 +54,7 @@ def is_pangram(sentence):
     letter_appearances = {}
 
     for char in lowercase_sentence:
-        if char.isalpha() == False: # This will allow us
+        if char.isalpha() == False: # This will allow us to chack whether all the characters are letters only
             continue
         if char not in letter_appearances:
             letter_appearances[char] = True
@@ -65,7 +65,6 @@ def is_pangram(sentence):
         return False
 # lets test our function
 print("-----------------------------------------------------")
-
 
 # Session 2 Example: String Formatting 
 # String Formatting allows you to create a tring "template" that dynamically fill in placeholders in the string.
@@ -78,7 +77,6 @@ currentTime = "March 12th, 8:10pm"
 # f"" option 1
 print(f"Welcome back, {userName} You have signed in at {currentTime}")
 print("Welcome back, {}! You have signed in at {}, enjoy your visit!".format(userName, currentTime)) # Both methods are pretty common
-
 
 
 # Instructor Demo
@@ -112,4 +110,4 @@ def reverse_words(s):
 
 sample_input = s = "  the sky is  blue "
 print(reverse_words(sample_input))
-# output: "blue is sky the"
+# output: "blue is sky the" 
