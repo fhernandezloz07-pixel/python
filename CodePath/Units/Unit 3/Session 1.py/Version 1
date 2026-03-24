@@ -10,3 +10,33 @@ count_mississippi(6) # calling and assigning value
 # What did you learn? 
 # I don't always need to print at the end, especially if there is already a print in 
 # the loops! I can simply call.
+
+print("------------------------------------------------------------------------")
+# Problem 2: Swap ends
+# Write a function swap_ends() that 
+# accepts a string my_str as a parameter 
+# and returns a new string where the first 
+# and last characters from my_str are swapped.
+'''
+U:
+Write code that swaps the first and the last letters in a string without chanigng the rest
+P:
+define a function with appropiate parameter string
+create a variable swapped that is initialized to an empty string
+for element in range(len(lst)):
+    call the variable and .join(last index[-1], and the middle ones, then the first one[0])
+return the created variable 
+Note: I need to know about string indexing and the .join feature
+'''
+def swap_ends(my_str):
+    swapped = my_str[-1] + my_str[1:-1] + my_str[0] # the last, the middle not including the last, and the first
+    # swapped = "".join(swapped(my_str)) # if we use a .join, it only takes in ONE iterable, like alist or stirng, not multiple arguments
+    # return swapped # do I need a return statement if there is no loop?
+    return swapped
+my_str = "boat"
+swapped = swap_ends(my_str)
+print(swapped)
+# What did you learn? 
+# You don't always need to use the .join feature, you can concatenate strings like normal +
+# think about the indexing and what -1 means
+print("------------------------------------------------------------------------")
