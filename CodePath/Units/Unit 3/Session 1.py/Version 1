@@ -1,0 +1,12 @@
+# Problem 1: Calling Mississippi
+# based on the following code, call the function so that
+# it prints out the following to the console (without calling the function more than once)
+
+def count_mississippi(limit):
+    for num in range(1, limit):
+        print( f"{num} mississippi") 
+
+count_mississippi(6) # calling and assigning value
+# What did you learn? 
+# I don't always need to print at the end, especially if there is already a print in 
+# the loops! I can simply call.
