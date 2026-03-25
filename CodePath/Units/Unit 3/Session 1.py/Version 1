@@ -116,4 +116,52 @@ print(reverse_string(my_str))
 # how to reverse all the letters by using the -1
 
 print("------------------------------------------------------------------------")
-# Problem 5: First 
+# Problem 5: First Unique
+    # Write a function first_unique_char() that 
+    # given a string my_str as a parameter,
+    # if finds the first non-repeating character in it and returns its index.
+    # If it does not exist, then return -1
+'''
+U:
+given a string, we have to find the characters that are not 
+repeating and maybe store them in a dictionary
+the first one that is not repeating shoul dbe printed out. 
+if there isn't a character that doesn't repeat print out -1
+
+P:
+define a function with the appropiate parameter string
+for char in my_str:
+create an empty dictionary
+    if char not in empty dicitonary:
+        empty dictionasry[char] = 1 <- Does not repeat
+    else: 
+        empty dictionary[char] += 1 <- adding one each time of appearance
+
+for key in our dictionary:
+    if dictionary[key] == 1:
+        return key
+    else:
+        return -1
+'''
+def first_unique_char(my_str):
+    for char in my_str:
+        repeating_dictionary = {}
+
+        if char not in repeating_dictionary:
+            repeating_dictionary[char] = 1
+        else:
+            repeating_dictionary[char] += 1
+
+    for char in repeating_dictionary:
+        if repeating_dictionary[char] == 1:
+            return 
+        else: 
+            return -1
+my_str = "leetcode"
+print(first_unique_char(my_str))
+
+str2 = "loveleetcode"
+print(first_unique_char(str2))
+
+str3 = "aabb"
+print(first_unique_char(str3))
