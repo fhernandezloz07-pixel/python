@@ -1,0 +1,59 @@
+# Problem 1: prime Number
+    # Write a function is_prime() that 
+    # takes in a positive integer n 
+    # and returns True if it is a prime number 
+    # and False otherwise. 
+    # A prime number is a number greater than 
+    # 1 that has no positive divisors other than 1 and itself.
+'''
+Understand:
+write a function that returns true or false depending if the 
+positive integer is a prime number or not
+Plan:
+1. define a function with the appropiate parameter n
+2. Note, prime numbers: 2, 5, 7, 11, 13
+2.1 loop that checks if n is greater than 1
+# Implement
+def is_prime(n):
+    if n == 1:
+        return False
+    for i in range(2, n): # takes care of even numbers 
+        if n %i == 0:
+            return False
+         
+    return True
+        
+print(is_prime(5))
+print(is_prime(12))
+print(is_prime(9))
+
+# Problem 2: Two-Pointer Reverse List
+    # Write a function reverse_list() that 
+    # takes in a list lst and 
+    # returns elements of the list in reverse order. 
+    # The list should be reversed in-place without using list slicing (e.g. lst[::-1]).
+
+Understand:
+based on a list of integers, we should return the list in reverse order without writing 
+the list slicing built in
+Plan:
+1. define a fucntion with the parameter list
+2. initialize two variables called the pominters
+
+'''
+
+def reverse_list(lst):
+    left = 0
+    right = len(lst)-1
+    # new list
+    reversed_list = []
+    
+    for i in range(len(lst)): # i is the index 
+        reversed_list.append(lst[right - i])
+        # len(lst) - 1
+            # i = 0 -> 5 - 0 = 5
+            # i = 1 -> 5 - 1 = 4
+    return reversed_list
+
+lst = [1, 2, 3, 4, 5]
+print(reverse_list(lst))

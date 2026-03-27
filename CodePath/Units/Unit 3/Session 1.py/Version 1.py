@@ -144,19 +144,21 @@ for key in our dictionary:
         return -1
 '''
 def first_unique_char(my_str):
-    for char in my_str:
-        repeating_dictionary = {}
+    repeating_dictionary = {}
 
-        if char not in repeating_dictionary:
-            repeating_dictionary[char] = 1
+
+    for i in my_str:
+        if i not in repeating_dictionary:
+            repeating_dictionary[i] = 1
         else:
-            repeating_dictionary[char] += 1
+            repeating_dictionary[i] += 1
 
-    for char in repeating_dictionary:
-        if repeating_dictionary[char] == 1:
-            return 
-        else: 
-            return -1
+    for i in range(len(my_str)):
+        index_location = my_str[i] # character!!! i is the index and my_str[i] is the character at that indez
+        if repeating_dictionary[index_location] == 1:
+            return i
+    return -1
+
 my_str = "leetcode"
 print(first_unique_char(my_str))
 
@@ -165,3 +167,34 @@ print(first_unique_char(str2))
 
 str3 = "aabb"
 print(first_unique_char(str3))
+
+print("--------------------------------------------------")
+# Problem 6: Minimum Distance
+'''
+U:
+return min distance between word 1 and word 2 based on a list of string words
+we have to subtract the indexes of word1 and word2
+P:
+define a function with appropiate parameters
+for i in list:
+
+'''
+
+def min_distance(words, word1, word2):
+    for word1 in range(len(words)):
+        for word2 in range(len(words)):
+                sub_indexes = word2 - word1
+    
+    return sub_indexes 
+
+words = ["the", "quick", "brown", "fox", "jumped", "the"]
+dist1 = min_distance(words, "quick", "jumped")
+dist2 = min_distance(words, "the", "jumped")
+print(dist1)
+print(dist2)
+
+words2 = ["code", "path", "code", "contribute",  "practice"]
+dist3 = min_distance(words2, "code", "practice")
+print(dist3)
+            
+
