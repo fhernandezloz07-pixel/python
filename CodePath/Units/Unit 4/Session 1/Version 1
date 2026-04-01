@@ -38,7 +38,10 @@ based on a list of integers, we should return the list in reverse order without 
 the list slicing built in
 Plan:
 1. define a fucntion with the parameter list
-2. initialize two variables called the pominters
+2. initialize two variables right and left 
+3. Create an empty list where you will store the reversed list
+4. write a for loop with i as the index of the lst
+5. append to the reversed list
 
 '''
 
