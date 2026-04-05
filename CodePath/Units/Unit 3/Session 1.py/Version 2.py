@@ -93,5 +93,5 @@ print(fixed_s)
 # Run 1: Something wrong with range(len(n)) -> changing it to range(len(s))
 # Run 2: something wrong with s.remove(n) -> changing to for n in range(len(s)), wait I cant use remove I have to use slicing!
 # Run 3: Fixed all of it using slicing yay!
-# What did you leanr? about slicing
+# What did you leanr? about slicing and that start is included but stop is not so I have to accomodate for that
 print("-----------------------------------------------------------")
