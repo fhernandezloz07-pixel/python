@@ -169,7 +169,10 @@ def reverse_sentence(sentence):
    
 sentence = "I solemnly swear I am up to no good"
 reverse_sentence(sentence)
-# What did you learn? The joined sentence t
+# What did you learn? 
+# The join built in lets you join the elmements of a list with a space!
+# reversing is ::-1
+# the split() built-in not only splits a string but each split is made by a space ad turns into elements of a list
 print("----------------------------------------------------------")
 
 
