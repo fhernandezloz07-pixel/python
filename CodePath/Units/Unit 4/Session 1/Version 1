@@ -44,7 +44,26 @@ Plan:
 5. append to the reversed list
 
 '''
+def reverse_list(lst):
+    # Beginning
+    left = 0
+    # Ending
+    right = len(lst) - 1
 
+    # 4, 5, 6, 7
+    while left < right:
+        temp = lst[left]
+        lst[left] = lst[right]
+        lst[right] = temp
+
+        left += 1
+        right -= 1
+    return lst
+s = [1, 2, 3, 4]
+s = list(s)
+print(reverse_list(s))
+
+print("-----------------------------------------------------------------")
 def reverse_list(lst):
     left = 0
     right = len(lst)-1
@@ -60,3 +79,33 @@ def reverse_list(lst):
 
 lst = [1, 2, 3, 4, 5]
 print(reverse_list(lst))
+
+print("-----------------------------------------------------------------")
+
+# problem 3:
+
+# Problem 4:
+def sort_array_by_parity(nums):
+    left = 0 # first number
+    right = len(nums) - 1 # last number
+
+    # even list
+    even_lst = []
+    # odd list
+    odd_lst = []
+
+    # new list
+    ordered_lst = [] # new list
+    
+    for num in nums:
+        if num % 2 == 0: # if even
+            even_lst.append(num)
+        else: # if odd
+            odd_lst.append(num)         
+    ordered_lst.append(even_lst + odd_lst)
+    return ordered_lst
+    
+nums = [3,1,2,4]
+nums2 = [0]
+print(sort_array_by_parity(nums))
+print(sort_array_by_parity(nums2))
