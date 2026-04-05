@@ -53,7 +53,7 @@ P:
 - brainstorming: 
     Use string indexing: A string is a sequence of characters, and each character has a position, called the index
     You acess a character by print(text[0]), here text would be the variable containing the stirng, the first character in the string is called!
-        
+us string slicing to output all except for n which is the index of the character we want to remove
 define a function with the appropiate string and integer parameters
 
 '''
@@ -81,13 +81,17 @@ lists are mutable, you can change individual elements
 # I:
 def remove_char(s, n):
     fixed_s = "" # Creating an empty string that will be the fixed one
-    for char in range(len(n)): # char is the index of the char
-        .remove
+    for char in range(len(s)): # n is the index of the character in the string
+        if char == n: # if the index of thecharacter we are testing is the same as n we want to remove it!
+            fixed_s = s[:n] + s[n + 1:len(s)] # this if the full thingie
 
-        
+    return fixed_s
 
 s = "typpo"
 fixed_s = remove_char(s, 2)
 print(fixed_s)
-
+# Run 1: Something wrong with range(len(n)) -> changing it to range(len(s))
+# Run 2: something wrong with s.remove(n) -> changing to for n in range(len(s)), wait I cant use remove I have to use slicing!
+# Run 3: Fixed all of it using slicing yay!
+# What did you leanr? about slicing
 print("-----------------------------------------------------------")
