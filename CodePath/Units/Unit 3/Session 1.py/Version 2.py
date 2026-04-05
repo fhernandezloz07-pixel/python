@@ -132,3 +132,44 @@ count2 = vowel_count(my_str2)
 print(count2)
 count3 = vowel_count(my_str3)
 print(count3)
+
+# Problem 4: Reverse Sentence: 
+    # Write a function reverse_sentence() that takes in a string sentence as a parameter
+    # and returns the string with the sentence but with the order of the words reversed 
+    # The sentence will only contain alphabetic characters and spaces to separate the words
+    # if there is only one word in the sentence, the function returns the original string. (duh)
+'''
+U:
+Based on a string sentence, reverse not the characters in the string but the words themselves
+P:
+- Brainstorm: 
+    there is a built in I can use to split words based on the spaces they have!
+    then I can have a list of all the individual words
+    and then I can recerse those words
+    I can also use the .join thingie
+define a function with the appropiate parameter as the string 
+define a list and make it equal to the action of splitting the sentence
+print list reversed with the :-1 feature see if it works...
+'''
+print("-----------------------------")
+
+# Example problem:
+
+splitting = "I love magic".split()
+print(splitting) # splitting a sentence by its spaces, python automatically puts it in a list!
+
+print(" ".join(["hello", "world"])) # Taking words and joining them with a space 
+
+print("-----------------------------")
+# I:
+def reverse_sentence(sentence):
+    list = sentence.split() # a list containing each word as an element
+    reversed_list = list[::-1] # reverses each element in the list which is the words
+    print(" ".join(reversed_list))
+   
+sentence = "I solemnly swear I am up to no good"
+reverse_sentence(sentence)
+# What did you learn? The joined sentence t
+print("----------------------------------------------------------")
+
+
