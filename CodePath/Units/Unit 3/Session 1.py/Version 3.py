@@ -37,4 +37,4 @@ def rotate_left(s, n):
 
 s = "rotation"
 print(rotate_left(s, 2))
-# 
+# What did you lea
