@@ -265,8 +265,8 @@ P:
 '''
 # I: 
 def find_the_needle(haystack, needle):
-    count = 0
-    for i in range(len(haystack) - len(needle) + 1):
+    count = 0 # initialize a count to 0
+    for i in range(len(haystack) - len(needle) + 1): 
         if haystack[i : i + len(needle)] == needle: # if the mini string is not in the big string
             return i
     return -1
@@ -278,6 +278,6 @@ print(find_the_needle(haystack, needle))
 haystack2 = "leetcode"
 needle2 = "leeto"
 print(find_the_needle(haystack2, needle2))
-# Check how this is right!!
+
 
 
