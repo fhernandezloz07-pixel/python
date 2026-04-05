@@ -94,4 +94,41 @@ print(fixed_s)
 # Run 2: something wrong with s.remove(n) -> changing to for n in range(len(s)), wait I cant use remove I have to use slicing!
 # Run 3: Fixed all of it using slicing yay!
 # What did you leanr? about slicing and that start is included but stop is not so I have to accomodate for that
+
 print("-----------------------------------------------------------")
+# Problem 3: Count Vowels
+    # Write a function vowel_count() that takes in a string s
+    # as a parameter and returns the number of vowels in the given string
+'''
+U:
+Cound the number of vowels in a string
+P:
+- Note: We do Not care about capitalization so accomodate for that
+define a function with parameter as the string
+initialize a counter variable that counts the amount of vowels in a string
+initialize a vowel variable and set it equal to aeiouAEIOU, to account for under and lowercase
+for a character in a string 
+if the character is in vowel variable 
+counter += 1
+return counter
+
+'''
+# I: 
+def vowel_count(s):
+    counter = 0
+    vowels = "aeiouAEIOU"
+    for char in s:
+        if char in vowels:
+            counter += 1
+    return counter
+
+my_str = "hello world"
+my_str2 = "aAaAaAaAAA"
+my_str3 = "ths strng s mssng vwls"
+
+count1 = vowel_count(my_str)
+print(count1)
+count2 = vowel_count(my_str2)
+print(count2)
+count3 = vowel_count(my_str3)
+print(count3)
