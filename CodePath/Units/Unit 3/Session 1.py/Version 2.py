@@ -173,6 +173,75 @@ reverse_sentence(sentence)
 # The join built in lets you join the elmements of a list with a space!
 # reversing is ::-1
 # the split() built-in not only splits a string but each split is made by a space ad turns into elements of a list
+
 print("----------------------------------------------------------")
+# Problem 5: String Compression 
+    # Write a function that takes in a string my-str as a parameter
+    # and performs basic string compression using counts of repeated characters
+    # Example: The string "aabcccccaaa" would become "a2b1c5a3".
+    # if the compressed string does not become smaller than the original string
+    # retunr the original string. 
+    # Assume the string only has alphabetic characters
+'''
+U:
+Based on a string with letters, return a compressed string 
+that contains each letter followed by the number of times it appeared 
+if that comressed string is larger than the original string return the original string
+P;
+- Brainstorm:
+    I need several loops in this problem 
+    I think I want to use a dictionary to track the letters and how many times they appear so I will do that first
+    When I aready identified each letter and how nmay times it has appeared,
+    I will work out outputing a compressed string 
+    After I have the original my_str and compressed String I have to check which one is bigger
 
 
+define a function with the appropiate parameter as the string
+create an empty dictionary 
+for an element in my_str:
+if element is not in dictionary:
+add it to the dictionary as a key and make it equal to 1
+else call the dictionary and key and add 1
+
+create an empty string called compressed_string
+for key in dictionary:
+append the key + value 
+
+if len(my_str) < len(compressed string)
+    return my_str
+else:
+    return compressed string
+'''
+# I: 
+def compress_string(my_str):
+    dictionary = {}
+
+    for element in my_str:
+        if element not in dictionary:
+            dictionary[element] = 1
+        else:
+            dictionary[element] += 1
+    
+    comp_str_list = []
+    for key in dictionary:
+        comp_str_list.append(key) 
+        comp_str_list.append(dictionary[key])
+
+    # Converting list to just string sentence
+    comp_str_sentence = ""
+    for i in comp_str_list:
+        comp_str_sentence += str(i) # we can only concatenate a string so we have to convert it as such
+
+
+    if len(my_str) < len(comp_str_sentence):
+        return my_str
+    else:
+        return comp_str_sentence
+
+my_str = "aaaaabbcccd"
+compressed_Str = compress_string(my_str)
+print(compressed_Str)
+
+my_str2 = "abcde"
+compressed_Str2 = compress_string(my_str2)
+print(compressed_Str2)
