@@ -246,3 +246,38 @@ my_str2 = "abcde"
 compressed_Str2 = compress_string(my_str2)
 print(compressed_Str2)
 # what did you learn? You got this you just gotta think!
+
+print("----------------------------------------------------------")
+# Problem 6: Needle in a Haystack
+    # Write a function find_the_needle() that takes in two string parameters:
+    # a needle and a haystack. The function returns the index of the first occurence 
+    # of needle in haystack, or -1 if needle is not part of haystack. 
+'''
+U:
+based on a string of letters called haystack, 
+we need to find the needle, aka a tring of letters,
+and count how many times it appeared 
+if the needle string was never found in the haystack string we return -1
+P:
+- Brainstorm: 
+    I will need to write a for loop to find needle in haystack 
+    I will also need to initialize a count for how many times I find needle in hatstack
+'''
+# I: 
+def find_the_needle(haystack, needle):
+    count = 0
+    for i in range(len(haystack) - len(needle) + 1):
+        if haystack[i : i + len(needle)] == needle: # if the mini string is not in the big string
+            return i
+    return -1
+
+haystack = "tobeornottobe"
+needle = "be"
+print(find_the_needle(haystack, needle))
+
+haystack2 = "leetcode"
+needle2 = "leeto"
+print(find_the_needle(haystack2, needle2))
+# Check how this is right!!
+
+
