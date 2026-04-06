@@ -71,7 +71,7 @@ for thing in enumerate(s):
 	print(thing)
 print("----------------------------")
 
-# Another example of enumerates
+# Another example of enumerate
 letters = ['a', 'b', 'c']
 for letter in letters:
 	print(letter)
@@ -81,7 +81,20 @@ a
 b
 c
 '''
-# But what if you also want the position of the index
+	# But what if you also want the position of the index
+for i, letter in enumerate(letters, start = 1):
+	print(i, letter)
+'''
+output: notice we start the indexing at 1
+1 a
+2 b
+3 c
+'''
+for i, letters in enumerate(letters):
+	print(i, letter)
+'''
+output: notice we start with normal 
+'''
 
 
 print("----------------------------")
