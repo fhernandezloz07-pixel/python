@@ -73,6 +73,7 @@ print("----------------------------")
 
 # Another example of enumerate
 letters = ['a', 'b', 'c']
+
 for letter in letters:
 	print(letter)
 '''
@@ -81,6 +82,8 @@ a
 b
 c
 '''
+print("----------------------------")
+
 	# But what if you also want the position of the index
 for i, letter in enumerate(letters, start = 1):
 	print(i, letter)
@@ -90,12 +93,17 @@ output: notice we start the indexing at 1
 2 b
 3 c
 '''
-for i, letters in enumerate(letters):
+print("----------------------------")
+	# But what if we want normal indexing and not to start at index 1
+letters = ['a', 'b', 'c']
+for i, letter in enumerate(letters): # for the index of the letter and the value itself 
 	print(i, letter)
 '''
-output: notice we start with normal 
+output: notice we start with normal indexing
+0 a
+1 b
+2 c
 '''
-
 
 print("----------------------------")
 def first_repeated_char(s):
