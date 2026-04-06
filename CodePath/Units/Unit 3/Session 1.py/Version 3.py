@@ -65,14 +65,37 @@ P:
 	for the first key in the dictionary: (I think here you have to use )
 	
 '''
+# Example of ennumerates
+s = "cat"
+for thing in enumerate(s):
+	print(thing)
+print("----------------------------")
+
+# Another example of enumerates
+letters = ['a', 'b', 'c']
+for letter in letters:
+	print(letter)
+'''
+output: 
+a
+b
+c
+'''
+# But what if you also want the position of the index
+
+
+print("----------------------------")
 def first_repeated_char(s):
-	rep_dictionary = {}
-	for char in s:
-		if s not in rep_dictionary:
-			rep_dictionary[s] = len(s) # we want the value of the key to be the index of the character in the string 
+	seen = {}
+	
+	# we usually do for char in s, 
+	# this time we want the character and its index!
+	for i, char in enumerate(s):  
+		
+		if char in seen:
+			return i
 		else:
-			rep_dictionary[s] = len(s)
-	value_index = # return the value of the first key
+			seen[char] = i
 
 s = "hello world"
 s2 = "aAbBCC"
