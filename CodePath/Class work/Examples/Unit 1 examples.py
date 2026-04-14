@@ -25,4 +25,3 @@ def above_threshold(nums, threshold):
 print("Test run", above_threshold([8, 12, 13, 11, 4, 10, 14], 10)) # The threshold is 10
 
 # output = [13, 11, 14]
-
