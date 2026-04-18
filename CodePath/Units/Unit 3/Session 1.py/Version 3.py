@@ -204,3 +204,42 @@ print(count)
 s2 = "aaaaaaaaaaaaaaa"
 count = length_of_longest_substring(s2)
 print(count)
+
+# Problem 6: Roman to integer
+	# Roman numberals are represented by seven different symnols (I, V, X, L, C, D, and M)
+	# and have these unique corresponding values: 
+		# I = 1 V = 5
+		# X = 10 L = 50
+		# C = 100 D = 500
+		# M = 1000
+	# Example 1: 2 -> II (I + I)
+	# Example 2: 12 -> XII (x + II)
+	# Example 3: 27 -> XXVII (XX + V + II)
+
+	# Example 4: 4 -> IV (I - V) 
+	# Example 5: 9 -> IX (I - X)
+		# if the number is in front and it is smaller 
+		# than the second, then it means we substract it
+'''
+U:
+write a function roman_to_int() that takes in a string s 
+that makes up a roman numberal. 
+The function should return the value of s.
+- Brainstorm: for each time we get a roman numberal representation
+we should return an integer
+asume each time we can add the before symbol to the next 
+unless the one before is less than the one after 
+
+make sure you account for the three cases as shown 
+
+P:
+define a function with the appropiate parameters
+initiate all variables as roman numberals with the appropiate equators as the integers
+for 
+if curren character less than character before it  
+'''
+def roman_to_int(s):
+	values_dictionary = { 'I': 1, 'V': 5, 'X': 10,'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+	for i in range(len(s)):
+		
+			
