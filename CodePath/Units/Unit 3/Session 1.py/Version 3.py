@@ -181,29 +181,17 @@ while character is not repeating
 	char - 1
 '''
 # I: 
-def length_of_longest_substring(s):
+# def length_of_longest_substring(s):
 	
-	no_repeats_list = [] # initialize an epty list to store the longest without repeat, 
-	# then count this out in the following loop
-
-	for index in range(len(s)): # char is the index 
-		while 0 < index < len(s): # while the index is greater than 0 but less than len(s) ... 
-			if s[index] != s[index - 1]: # if the current character at the index is not equal to the previous one 
-				no_repeats_list.append() # append it to the no repeating list
+	
 		
-	# counting the amount of characters in the list s2
-	count_list = 0
-	for  letter in no_repeats_list: # for a letter in the no repeating list
-		count_list += 1 # for every letter in the list we add 1 (to count )
-	return count_list # should return a number
-		
-s = "abcdeefghhhhh"
-count = length_of_longest_substring(s)
-print(count)
+# s = "abcdeefghhhhh"
+# count = length_of_longest_substring(s)
+# print(count)
 
-s2 = "aaaaaaaaaaaaaaa"
-count = length_of_longest_substring(s2)
-print(count)
+# s2 = "aaaaaaaaaaaaaaa"
+# count = length_of_longest_substring(s2)
+# print(count)
 
 # Problem 6: Roman to integer
 	# Roman numberals are represented by seven different symnols (I, V, X, L, C, D, and M)
@@ -238,8 +226,50 @@ initiate all variables as roman numberals with the appropiate equators as the in
 for 
 if curren character less than character before it  
 '''
-def roman_to_int(s):
-	values_dictionary = { 'I': 1, 'V': 5, 'X': 10,'L': 50, 'C': 100, 'D': 500, 'M': 1000}
-	for i in range(len(s)):
-		
-			
+def roman_to_int(r):
+	values_dictionary = {'I': 1, 'V': 5, 'X': 10,'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+	
+	total = 0 
+	for i in range(len(r)): 
+		current = values_dictionary[r[i]] 
+		total += current 
+
+		if i > 0 and values_dictionary[r[i - 1]]:
+			total -= 2 * values_dictionary[r[i - 1]]
+	
+	return total
+
+r = "XL"
+print(roman_to_int(r))
+
+r2 = "LVIII"
+print(roman_to_int(r2))
+
+r3 = "MCMXCIV"
+print(roman_to_int(r3))
+
+# we initioated a values dictionary containing each character and the number it's atributted to
+# the total amount we are returning 
+# The i represents the index of the characters in the list
+# the value of the current Roman numberal character I am looking at in the loop
+		# s[i] -> get a character from the string	
+			# s -> the roman numberal string
+			# i -> the index position
+				# s[0] → 'X'
+				# s[1] → 'I'
+				# s[2] → 'V'
+		# Then when we put it inside the values_dictionary[] it looks up the current character in the dictionary 
+# The total adds up all the characters together by adding each current one
+# if loop:
+	# if the index of the character is greater than 0 and the value of the previous character
+	# and it is also less than the current character ...
+'''
+if loop explanation: 
+	i > 0 (so we dont go out of bounds and we actually check that there is a previous character)
+	values[s[i - 1]] < current ("is the prevous roman numberal smaller than the current one?")
+		if so then we have a subtraction case but we subtract 2 * because we had already added it once in the loop
+'''
+
+'''
+values_dictionary[s[i]]  ---> "Get the character at position i, then find its value in the dicticary"
+'''

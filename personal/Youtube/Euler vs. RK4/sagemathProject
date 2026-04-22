@@ -1,0 +1,102 @@
+@interact
+def app(step = selector(["HomePage", "Introduction", "Definitions", "Comparison", "Accumulation of Error", "Conclusion"], label="Navigate:")):
+
+    if step == "HomePage":
+
+        show(html("""
+        <div style='max-width:2000px; margin:auto; font-family:"Courier";'>
+
+            <h1 style='color: darkblue; text-align:center'>Welcome!</h1>
+
+            <h2 style='text-align:center;'>
+            An Analysis of Euler’s Method and Runge-Kutta 4th Order.
+            </h2>
+
+            <h3>Project description and objective:</h3>
+
+            <p style='font-size:18px; line-height:1.0;'>
+            In this project, I will use concepts from Differential equations to explain two key mathematical
+            numerical methods used to approximate solutions to Ordinary Linear Differential Equations.
+            The first, used by students at the introductory level, is <b style='color: orange;'>Euler’s Method</b>. 
+            The second, which is most commonly used for reasons of accuracy and simplicity, is <b style='color: turquoise;'>Runge-Kutta 4th Order</b>, stemming
+            from the genera method of Runge Kutta.
+            </p>
+
+            <p style='font-size:18px; line-height:1.0;'>
+            These methods are relevant because they are not only used in technical setting such as in Engineering or statistical modeling, but they also represent 
+            most notably real world systems of population growth.
+            </p>
+            
+            <h4>Table of contents: (use slider bar at the top of the page)</h4>
+            <ol style='font-size:18px; line-height:1.3;'>
+                <b><li>
+                Introduction </b>- An introduction to our problem and its selevance.
+                <b><li>
+                Definitions </b>- Defining the methods with reasoning and examples.
+                <b><li>
+                Comparison </b>- A comparison of both methods, determining which is "best".
+                <b><li>
+                Accumulation of Error </b>- Stemming from the comparison of the methods, comparing their accumulation of errors.
+                <b><li>
+                Conclusion </b>- Wrapping up all our findings.
+            </ol>
+
+        </div>
+        """))
+
+
+    elif step == "Introduction":
+        show(html(r"""
+        <div style='max-width:2000px; margin:auto; font-family:"Courier";'>
+        <h1 style='color: Black; text-align:center'>An introduction to Methods Of Differential Equation Approximations</h1>
+        <h2 'style= font-size = 5px '>What is an Ordinary Differential Equation?</h2>
+        <p>
+        Ordinary differential equations are equations are able to explain how a quantity 
+        changes over time. If they are linear they can be solved using integration or 
+        algebraic manipulation, but it is often the case that they are not. For nonlinear
+        equations, solutions aren’t fixed and we have to rely on different methods to approximate a solution. 
+        This is where we have to rely on two methods, namely Euler's Method and Runge Kutta. 
+        We will mainly discuss differential equations of the form \[Y'(x)=f(x, Y(x)),x >= x_0\] where 
+        \[Y(x)\] is the function we seek. 
+        </p>
+        <p>
+        The following is an example of a simple differential and its general solution. 
+        \[Y'(x)=sin(x)\] is the differential equation whose solution is \[Y(x)=-cos(x)+c\]
+        Notice that to solve for the general solution all we have to do is sparate the variables, integrate both sides of the equation, and simplify.
+        \[ \frac{dy}{dx}= sin(x)\]
+        \[dy = sin(x)dx\]
+        \[\int dy=\int \sin(x)\,dx\]
+        \[Y(x)=-cos(x)+c\]
+        </p>
+</div>
+"""))
+        x = var('x')
+        y = function('y')(x)
+
+        DE = diff(y, x) - sin(x)
+        gen_sol = desolve(DE, y)
+
+        p1 = plot(gen_sol.subs(_C=1), (x, -7, 7), color='magenta')
+        label1 = text(r"$Y(x) = -\cos(x) + 1$", (1.7, 0.5), color='magenta')
+        p2 = plot(gen_sol.subs(_C=2), (x, -7, 7), color='blue')
+        label2 = text(r"$Y(x) = -\cos(x) + 2$", (1.7, 1.6), color='blue')
+        p3 = plot(gen_sol.subs(_C=3), (x, -7, 7), color='green')
+        label3 = text(r"$Y(x) = -\cos(x) + 3$", (1.7, 2.6), color='green')
+
+        show(html(r"""
+        <p style='max-width:2000px; margin:auto; font-family:"Courier";'> 
+        The following graph displays our general solution with three different 
+        defined <b>constants of integration</b>. Notice that neither the period or 
+        amplitude of the function change but it shifts upwards depending on its 
+        constant of integration and to the side when we add the negative leading 
+        coefficient to the trigonometric cunction.
+        </p>
+        """))
+        show(p1 + p2 + p3 + label1 + label2 + label3)
+        
+ 
+    elif step == "Definitions":
+        show("📘 Definitions page")
+
+    
+    
