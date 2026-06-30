@@ -123,5 +123,78 @@ def countdown(m, n):
         print(i)
 
 countdown(5, 1)
+print("__________________________________________________________")
 
+# Problem 10: Calculate Power
+def power(base, exponent):
+    accumulator = 1 # start the accumulator at 1 because we are essentially multiplying
+    for i in range(exponent):
+        accumulator *= base 
+    return accumulator
 
+pow1 = power(2,5)
+print(pow1)
+pow2 = power(3,3)
+print(pow2)
+print("__________________________________________________________")
+
+# Problem 11: Length of list 
+def list_length(lst):
+    accumulator = 0
+    for i in lst:
+        accumulator += 1
+    return accumulator
+
+lst = [2, 4, 6, 8, 10]
+length = list_length(lst)
+print(length)
+print("__________________________________________________________")
+
+# Problem 12: Calculate Factorial
+def factorial(n):
+    accumulator = 1 # initialize to 1 because we are multiplying 
+    for i in range(n, 1, -1): # we are counting down!
+        accumulator *= i
+    return accumulator
+
+print(factorial(3))
+print("__________________________________________________________")
+
+# Problem 13: Calculate the squares
+def squares(nums):
+    new_lst = [] # initialize a new empty list
+    for i in nums:
+        new_lst.append(i * i)
+    return new_lst # new list containing the swuare of each number in the og list
+
+lst = [1,2,3,4]
+print(squares(lst))
+print("__________________________________________________________")
+
+# Problem 14: Multiply List
+def multiply_list(lst, multiplier):
+    lst2 = []
+    for i in lst:
+        lst2.append(i * multiplier)
+    return lst2
+
+lst = [1,2,3]
+new_lst = multiply_list(lst, 3) 
+print(new_lst)
+print("__________________________________________________________")
+
+# Problem 15: Count Evens
+def count_evens(lst):
+    even_counter = 0
+    for i in lst:
+        if i % 2 == 0: # check if i is even
+            even_counter += 1
+    return even_counter # The number of even numbers in the list
+
+lst1 = [1,5,7,9]
+count1 = count_evens(lst1)
+print(count1)
+
+lst2 = [2,4,6,8]
+count2 = count_evens(lst2)
+print(count2)
