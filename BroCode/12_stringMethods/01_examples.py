@@ -10,6 +10,9 @@ phone_number = input("Enter your phone number: ")
 # name = name.lower() # all lowercase in a string
 # result = name.isdigit() # return either true or false if the string contains only digits
 # result = name.isalpha() # return a boolean true or false depending if the string contains only letters
-result = phone_number.count("-") # count how many characters are within a string
+# result = phone_number.count("-") # count how many characters are within a string
+result = phone_number.replace("-", " ") # replacing one character with another
 
 print(result)
+
+# if you ever need help deciding what to use or cant remember you can use the following
