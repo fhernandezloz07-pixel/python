@@ -47,6 +47,22 @@ print(flipped_lst)
 print("---------------------------------------------------------------")
 # Problem 5: Max Difference
 def max_difference(lst):
-    for num in lst: 
-        if num - 1 
+    # Find Max number
+    max_num = lst[0] # lets just say the max number in the list is the first one so we can start the comparison
+    for num in lst:
+        if num > max_num:
+            max_num = num
+
+    # Find min num
+    min_num = lst[0]
+    for num in lst:
+        if num < min_num:
+            min_num = num
+
+    num_diff = max_num - min_num
+    return num_diff
+
+lst = [5,22,8,10,2]
+max_diff = max_difference(lst)
+print(max_diff)
 
