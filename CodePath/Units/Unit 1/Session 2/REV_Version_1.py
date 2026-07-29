@@ -66,3 +66,33 @@ lst = [5,22,8,10,2]
 max_diff = max_difference(lst)
 print(max_diff)
 
+print("---------------------------------------------------------------")
+# Problem 6: Below Threshold
+def count_less_than(numbers, threshold):
+    count = 0
+    for num in numbers:
+        if num < threshold:
+            count += 1
+    return count
+
+numbers = [12,8,2,4,4,10]
+counter = count_less_than(numbers,5)
+print(counter)
+
+print("---------------------------------------------------------------")
+# Problem 7: Evens List
+def get_evens(lst):
+    evens_lst = []
+    for num in lst:
+        if num % 2 == 0:
+            evens_lst.append(num)
+    return evens_lst
+
+lst = [1,2,3,4]
+evens_lst = get_evens(lst)
+print(evens_lst)
+
+
+
+
+
