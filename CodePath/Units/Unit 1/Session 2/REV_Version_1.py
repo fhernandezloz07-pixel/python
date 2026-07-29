@@ -92,7 +92,61 @@ lst = [1,2,3,4]
 evens_lst = get_evens(lst)
 print(evens_lst)
 
+print("---------------------------------------------------------------")
+# Problem 8: Multiples of five
+def multiples_of_five():
+    for num in range(5, 101, 5): # you have to use a for loop bc it will literally print out "range(---)"
+        print(num)
 
+multiples_of_five()
 
+print("---------------------------------------------------------------")
+# Problem 9: Divisors
+def find_divisors(n):
+    div_lst = []
+    for i in range(1, n + 1):
+        if n % i == 0:
+            div_lst.append(i)
+    return div_lst
 
+lst = find_divisors(6)
+print(lst)
+
+print("---------------------------------------------------------------")
+# Problem 10: FizzBuzz
+def fizzbuzz(n):
+    for num in range(1, n + 1): # we are inclusive
+        if num % 3 == 0:
+            print("Fizz")
+        elif num % 5 == 0:
+            print("Buzz")
+        else:
+            print(num)
+
+fizzbuzz(13)
+
+print("---------------------------------------------------------------")
+# Problem 11: Print the Index
+def print_indices(lst):
+    for num in range(len(lst)): # inclusive
+        print(num)
+
+lst = [5,1,3,8,2]
+print_indices(lst)
+
+print("---------------------------------------------------------------")
+# Problem 12: Linear Search
+def linear_search(lst, target):
+    for i in range(len(lst)): # range(len(lst)) is for returning the index!!
+        if lst[i] == target: # lst[i] represents the number in the given index
+            return i
+    return -1
+
+lst = [1,4,5,2,8]
+position = linear_search(lst,5)
+print(position)
+
+lst = [1,4,5,2,8]
+position = linear_search(lst,10)
+print(position)
 
